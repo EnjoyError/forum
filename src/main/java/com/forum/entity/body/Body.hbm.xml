@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.forum.entity.body.Body" table="body">
+		<id name="id" column="ID" type="long">
+			<generator class="identity"></generator>
+		</id>
+		<property name="text" column="TEXT" type="string" length="200" />
+		<set name="replys" lazy="true">
+			<key column="BODY_ID" />
+			<one-to-many class="com.forum.entity.reply.Reply" />
+		</set>
+
+		<!-- baseEntity里的字段 -->
+		<property name="createDate" column="CREATE_DATE" type="timestamp"
+			length="50" />
+		<property name="creatorId" column="CREATOR_ID" type="long"
+			length="50" />
+		<property name="creatorName" column="CREATOR_NAME" type="string"
+			length="50" />
+		<property name="lastUpdateDate" column="LAST_UPDATE_DATE"
+			type="timestamp" length="50" />
+		<property name="lastUpdateId" column="LAST_UPDATE_ID" type="long"
+			length="50" />
+		<property name="lastUpdateName" column="LAST_UPDATE_NAME"
+			type="string" length="50" />
+	</class>
+</hibernate-mapping>

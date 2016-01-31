@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="  
+    http://www.springframework.org/schema/context  
+    http://www.springframework.org/schema/context/spring-context.xsd  
+    http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans.xsd  
+    http://www.springframework.org/schema/tx  
+    http://www.springframework.org/schema/tx/spring-tx.xsd  
+    http://www.springframework.org/schema/jdbc  
+    http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd  
+    http://www.springframework.org/schema/cache  
+    http://www.springframework.org/schema/cache/spring-cache-3.1.xsd  
+    http://www.springframework.org/schema/aop  
+    http://www.springframework.org/schema/aop/spring-aop.xsd  
+    http://www.springframework.org/schema/util  
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<bean name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/forum" />
+		<property name="user" value="root" />
+		<property name="password" value="admin" />
+
+		<property name="maxPoolSize" value="10" />
+		<property name="minPoolSize" value="1" />
+
+		<!--初始化连接池中的连接数量 -->
+		<property name="initialPoolSize" value="1" />
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数 -->
+		<property name="acquireIncrement" value="2" />
+	</bean>
+
+	<!-- 本地会话工厂bean(spring整合hibernate的核心入口) -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:com/forum/entity</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="store" class="com.forum.dao.baseDao.Store">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="userService" class="com.forum.service.baseService.UserService">
+		<property name="store" ref="store"/>
+	</bean>
+</beans>
