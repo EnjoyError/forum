@@ -1,4 +1,4 @@
-package com.forum.service.service;
+package com.forum.service;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.forum.service.service;
+package com.forum.service;
 
 import com.forum.dao.baseDao.Store;
 
