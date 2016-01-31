@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.forum.service.service.UserService;
+import com.forum.service.UserService;
 
 @Controller
 @RequestMapping("/login.action")

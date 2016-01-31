@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.forum.entity.user.User;
-import com.forum.service.service.UserService;
+import com.forum.service.UserService;
 
 @Controller
 @RequestMapping("/user.action")
