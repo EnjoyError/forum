@@ -5,6 +5,19 @@
 	<artifactId>forum</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
+	<repositories>
+        <repository>
+            <id>nexus</id>
+            <name>local private nexus</name>
+            <url>http://maven.oschina.net/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
