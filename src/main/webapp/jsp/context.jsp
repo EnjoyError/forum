@@ -12,7 +12,7 @@
 
 <link href="/forum/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
-<script src="https://code.jquery.com/jquery.js"></script>
+<script src="/forum/js/jquery-3.1.0.min.js"></script>
 <!-- 包括所有已编译的插件 -->
 <script src="/forum/js/bootstrap.min.js"></script>
 </head>
