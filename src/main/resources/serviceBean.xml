@@ -25,7 +25,7 @@
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
 		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/forum" />
 		<property name="user" value="root" />
-		<property name="password" value="admin" />
+		<property name="password" value="4523896701" />
 
 		<property name="maxPoolSize" value="10" />
 		<property name="minPoolSize" value="1" />
@@ -50,7 +50,7 @@
 	<bean id="store" class="com.forum.dao.baseDao.Store">
 		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
-	<bean id="userService" class="com.forum.service.baseService.UserService">
+	<bean id="userService" class="com.forum.service.UserService">
 		<property name="store" ref="store"/>
 	</bean>
 </beans>
