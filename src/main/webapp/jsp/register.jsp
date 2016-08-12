@@ -14,6 +14,7 @@
 <script src="/forum/js/jquery-3.1.0.min.js"></script>
 <!-- 包括所有已编译的插件 -->
 <script src="/forum/js/bootstrap.min.js"></script>
+<script src="/forum/js/angular.min.js"></script>
 </head>
 
 <body>
@@ -107,9 +108,25 @@
 					</form>
 				</div>
 			</div>
-
-		</div>
+			<div  ng-app="myApp" ng-controller="ctrl">
+			<button  ng-click="myClick()">ceshi</button>
+			
 	</div>
+		</div> 	
+	</div>
+	
+	<script type="text/javascript">
+		var myHttp = null;
+		var app = angular.module('myApp', []);
+		app.controller("ctrl", function($http, $scope) {
+			$scope.myClick = function() {
+				$http.get("/forum/register.action?method=test&name=Sackr")
+						.success(function(response) {
+							alert(response);
+						});
+			}
+		})
+	</script>
 
 </body>
 </html>
