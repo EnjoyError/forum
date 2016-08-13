@@ -8,6 +8,6 @@ package com.forum.util;
  */
 public class StringUtil {
 	public static boolean isEmpty(String str) {
-		return "".equals(str) || (null == str);
+		return (null == str) || "".equals(str.trim());
 	}
 }

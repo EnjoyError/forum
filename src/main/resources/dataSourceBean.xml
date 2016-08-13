@@ -20,8 +20,19 @@
     http://www.springframework.org/schema/aop/spring-aop.xsd  
     http://www.springframework.org/schema/util  
     http://www.springframework.org/schema/util/spring-util.xsd">
-    
-	<bean id="userService" class="com.forum.service.UserService">
-		<property name="store" ref="store" />
+
+	<bean name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/forum" />
+		<property name="user" value="root" />
+		<property name="password" value="4523896701" />
+
+		<property name="maxPoolSize" value="10" />
+		<property name="minPoolSize" value="1" />
+
+		<!--初始化连接池中的连接数量 -->
+		<property name="initialPoolSize" value="1" />
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数 -->
+		<property name="acquireIncrement" value="2" />
 	</bean>
 </beans>

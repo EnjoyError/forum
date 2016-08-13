@@ -9,4 +9,8 @@ package com.forum.util;
 public interface CodeType {
 	/** 用户code */
 	public static final String USER_CODE = "US";
+	/**
+	 * 帖子code
+	 */
+	public static final String ARTICLE_CODE = "AT";
 }

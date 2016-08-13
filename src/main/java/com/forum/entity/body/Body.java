@@ -2,6 +2,7 @@ package com.forum.entity.body;
 
 import java.util.List;
 
+import com.forum.entity.article.Article;
 import com.forum.entity.baseEntity.BaseEntity;
 import com.forum.entity.reply.Reply;
 
@@ -21,6 +22,7 @@ public class Body extends BaseEntity {
 		return text;
 	}
 
+	
 	public void setText(String text) {
 		this.text = text;
 	}

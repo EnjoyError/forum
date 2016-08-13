@@ -12,6 +12,27 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	
+	<!-- 指定Spring Bean的配置文件所在目录。默认配置在WEB-INF目录下 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:dataSourceBean.xml,
+			classpath:daoBean.xml,
+			classpath:serviceBean.xml
+		</param-value>
+	</context-param>
+	
+	 <!-- 异常处理过滤器 -->  
+    <filter>  
+        <filter-name>exceptionProcessFilter</filter-name>  
+        <filter-class>com.forum.filter.ExceptionProcessFilter</filter-class>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>exceptionProcessFilter</filter-name>  
+        <url-pattern>*.action</url-pattern>  
+    </filter-mapping>
+    
 	<!-- Spring MVC配置 -->
 	<!-- ====================================== -->
 
@@ -23,7 +44,9 @@
 			默认 </init-param> -->
 			<init-param>
 				<param-name>contextConfigLocation</param-name>
-				<param-value>classpath:spring-servlet.xml</param-value>
+				<param-value>
+					classpath:spring-servlet.xml
+				</param-value>
 			</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
@@ -39,10 +62,4 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
-
-	<!-- 指定Spring Bean的配置文件所在目录。默认配置在WEB-INF目录下 -->
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:serviceBean.xml</param-value>
-	</context-param>
 </web-app>

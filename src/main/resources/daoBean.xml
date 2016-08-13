@@ -20,8 +20,19 @@
     http://www.springframework.org/schema/aop/spring-aop.xsd  
     http://www.springframework.org/schema/util  
     http://www.springframework.org/schema/util/spring-util.xsd">
-    
-	<bean id="userService" class="com.forum.service.UserService">
-		<property name="store" ref="store" />
+
+	<!-- 本地会话工厂bean(spring整合hibernate的核心入口) -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:com/forum/entity</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="store" class="com.forum.dao.baseDao.Store">
+		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
 </beans>
