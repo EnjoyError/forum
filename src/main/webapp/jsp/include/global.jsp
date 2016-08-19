@@ -8,3 +8,4 @@
 
 <c:set var="website" value="<%=new HashMap<String, Object>()%>" />
 <c:set target="${website}" property="title" value="forum" />
+<c:set target="${website}" property="copyright" value="Powered by java &copy; 2000, 2002, 2005, 2007 java Group" />
