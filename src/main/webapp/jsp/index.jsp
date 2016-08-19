@@ -15,7 +15,7 @@
 		<div class="row">
 			<div class="col-xs-1">
 				<img src="${ctx}/image/icon_mini_login.gif" alt="*" height="13" width="12" />
-				<a href="#">注册</a>
+				<a href="${ctx}/jsp/register.jsp">注册</a>
 			</div>
 			<div class="col-xs-1">
 				<img src="${ctx}/image/icon_mini_register.gif" alt="*" height="13" width="12" />
