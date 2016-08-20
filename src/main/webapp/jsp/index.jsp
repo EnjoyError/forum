@@ -1,62 +1,41 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ include  file="/jsp/include/global.jsp"%>
+<%@ include file="/jsp/include/global.jsp"%>
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>${website.title}</title>
-	<link href="${ctx}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<script src="${ctx}/js/jquery-3.1.0.min.js"></script>
-	<script src="${ctx}/js/bootstrap.min.js"></script>
+	<%@ include file="/jsp/include/head.jsp"%>
+	<link href="${ctx}/css/index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div class="container">
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">${website.title}</a>
+<%@ include file="/jsp/include/navbar.jsp"%>
+
+<div class="headerwrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-1">
+				<img src="${ctx}/image/icon_mini_login.gif" alt="*" height="13" width="12" />
+				<a href="${ctx}/jsp/register.jsp">注册</a>
+			</div>
+			<div class="col-xs-1">
+				<img src="${ctx}/image/icon_mini_register.gif" alt="*" height="13" width="12" />
+				<a href="#">登录</a>
+			</div>
+			<div class="col-xs-offset-11 text-center">
+				<img src="${ctx}/image/icon_mini_faq.gif" alt="*" height="13" width="12" />
+				<a href="#">FAQ</a>
+			</div>
 		</div>
-		<div>
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">首页</a></li>
-				<li><a href="#">论坛</a></li>
-				<li><a href="#">wiki</a></li>
-				<li><a href="#">留言</a></li>
-			</ul>
+		
+		<div class="row">
+			<div class="col-xs-1">
+				<a href="${ctx}/">首页</a>
+			</div>
+			<div class="col-xs-offset-10 text-center">
+				<p>当前时区为 UTC + 8 小时</p>
+			</div>
 		</div>
-		<div>
-			<form class="navbar-form navbar-right" role="search">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="关键字" />
-				</div>
-				<button type="submit" class="btn btn-default">搜索</button>
-			</form>
-		</div>
-	</nav>
-	
-	<div class="row">
-		<div class="col-xs-1">
-			<a href="#">注册</a>
-		</div>
-		<div class="col-xs-1">
-			<a href="#">登录</a>
-		</div>
-		<div class="col-xs-offset-11 text-center">
-			<a href="#">FAQ</a>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="col-xs-1">
-			<a href="#">首页</a>
-		</div>
-		<div class="col-xs-offset-10">
-			<p>当前时区为 UTC + 8 小时</p>
-		</div>
-	</div>
-	
-	<div class="row">
+		
 		<ul class="list-group">
 			<li class="list-group-item">
 				<div class="row">
@@ -75,288 +54,298 @@
 				</div>
 			</li>
 		</ul>
-		
-		<ul class="list-group">
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-8">
-						<p>公告/注意事项</p>
-					</div>
-					<div class="col-xs-4">
-						<p></p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1">
-					</div>
-					<div class="col-xs-7">
-						<h4>新闻和通知</h4>
-						<p>最新ubuntu/linux/开源新闻或者其它IT相关资讯</p>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1">
-					</div>
-					<div class="col-xs-7">
-						<h4>新闻和通知</h4>
-						<p>最新ubuntu/linux/开源新闻或者其它IT相关资讯</p>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1">
-					</div>
-					<div class="col-xs-7">
-						<h4>新闻和通知</h4>
-						<p>最新ubuntu/linux/开源新闻或者其它IT相关资讯</p>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1">
-					</div>
-					<div class="col-xs-7">
-						<h4>新闻和通知</h4>
-						<p>最新ubuntu/linux/开源新闻或者其它IT相关资讯</p>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-		</ul>
-		
-		<ul class="list-group">
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-8">
-						<p>公告/注意事项</p>
-					</div>
-					<div class="col-xs-4">
-						<p></p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1">
-					</div>
-					<div class="col-xs-7">
-						<h4>新闻和通知</h4>
-						<p>最新ubuntu/linux/开源新闻或者其它IT相关资讯</p>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1">
-					</div>
-					<div class="col-xs-7">
-						<h4>新闻和通知</h4>
-						<p>最新ubuntu/linux/开源新闻或者其它IT相关资讯</p>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1">
-					</div>
-					<div class="col-xs-7">
-						<h4>新闻和通知</h4>
-						<p>最新ubuntu/linux/开源新闻或者其它IT相关资讯</p>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1">
-					</div>
-					<div class="col-xs-7">
-						<h4>新闻和通知</h4>
-						<p>最新ubuntu/linux/开源新闻或者其它IT相关资讯</p>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-		</ul>
-		
-		<ul class="list-group">
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-8">
-						<p>公告/注意事项</p>
-					</div>
-					<div class="col-xs-4">
-						<p></p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1">
-					</div>
-					<div class="col-xs-7">
-						<h4>新闻和通知</h4>
-						<p>最新ubuntu/linux/开源新闻或者其它IT相关资讯</p>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1">
-					</div>
-					<div class="col-xs-7">
-						<h4>新闻和通知</h4>
-						<p>最新ubuntu/linux/开源新闻或者其它IT相关资讯</p>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1">
-					</div>
-					<div class="col-xs-7">
-						<h4>新闻和通知</h4>
-						<p>最新ubuntu/linux/开源新闻或者其它IT相关资讯</p>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1">
-					</div>
-					<div class="col-xs-7">
-						<h4>新闻和通知</h4>
-						<p>最新ubuntu/linux/开源新闻或者其它IT相关资讯</p>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
 	
-	<div class="row">
+		<ul class="list-group">
+			<li class="list-group-item">
+				<div class="row">
+					<div class="col-xs-8">
+						<p>公告/注意事项</p>
+					</div>
+					<div class="col-xs-4">
+						<p></p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/forum_read_subforum.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-2">
+						<p>2016-08-12 8:48</p>
+						<p>onlylove 查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/forum_read_subforum.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-2">
+						<p>2016-08-12 8:48</p>
+						<p>onlylove 查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-2">
+						<p>2016-08-12 8:48</p>
+						<p>onlylove 查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/forum_read_subforum.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-2">
+						<p>2016-08-12 8:48</p>
+						<p>onlylove 查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+		
+		<ul class="list-group">
+			<li class="list-group-item">
+				<div class="row">
+					<div class="col-xs-8">
+						<p>公告/注意事项</p>
+					</div>
+					<div class="col-xs-4">
+						<p></p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/forum_read_subforum.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-2">
+						<p>2016-08-12 8:48</p>
+						<p>onlylove 查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/forum_read_subforum.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-2">
+						<p>2016-08-12 8:48</p>
+						<p>onlylove 查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-2">
+						<p>2016-08-12 8:48</p>
+						<p>onlylove 查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-2">
+						<p>2016-08-12 8:48</p>
+						<p>onlylove 查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+		
+		<ul class="list-group">
+			<li class="list-group-item">
+				<div class="row">
+					<div class="col-xs-8">
+						<p>公告/注意事项</p>
+					</div>
+					<div class="col-xs-4">
+						<p></p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-2">
+						<p>2016-08-12 8:48</p>
+						<p>onlylove 查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-2">
+						<p>2016-08-12 8:48</p>
+						<p>onlylove 查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-2">
+						<p>2016-08-12 8:48</p>
+						<p>onlylove 查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-2">
+						<p>2016-08-12 8:48</p>
+						<p>onlylove 查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	
 		<ul class="list-group">
 			<li class="list-group-item">
 				<div class="row">
@@ -367,8 +356,8 @@
 			</li>
 			<li class="list-group-item">
 				<div class="row">
-					<div class="col-xs-1">
-						<p></p>
+					<div class="col-xs-1 online">
+						<img src="${ctx}/image/whosonline.gif" alt="没有未读文章" title="在线用户" height="25" width="46" />
 					</div>
 					<div class="col-xs-11">
 						<p>线上共有 16 位用户：11 位注册用户，0 位隐身用户和 5 位游客 (基于过去 5 分钟内的用户活动记录)</p>
@@ -379,27 +368,51 @@
 				</div>
 			</li>
 		</ul>
-	</div>
-	
-	<div class="row">
-		<div class="col-xs-12 text-center">
-			<div class="col-xs-4">
-				<p>有新帖</p>
+		
+		<ul class="list-group">
+			<li class="list-group-item">
+				<div class="row">
+					<div class="col-xs-12">
+						<p>统计信息</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row">
+					<div class="col-xs-1 statistics">
+						<img src="${ctx}/image/whosonline.gif" alt="没有未读文章" title="统计信息" height="25" width="46" />
+					</div>
+					<div class="col-xs-11">
+						<p>帖子总数：3011819 | 主题总数：386335 | 注册用户总数：508016 | 最新注册的用户：null</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+		
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<div class="col-xs-4">
+					<div>
+						<p>有新帖</p>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="posttype">
+						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+						<p>无新帖</p>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="posttype">
+						<img src="${ctx}/image/forum_read_locked.gif" alt="无新帖 [ 锁定 ]" title="无新帖 [ 锁定 ]" height="25" width="46" />
+						<p>版面锁定</p>
+					</div>
+				</div>
 			</div>
-			<div class="col-xs-4">
-				<p>无新帖</p>
-			</div>
-			<div class="col-xs-4">
-				<p>版面锁定</p>
-			</div>
-		</div>
-		<div class="text-center">
-			<p>本站点为公益性站点，用于推广开源自由软件，由 DiaHosting VPS 和 BudgetVM VPS 提供服务。</p>
-			<p>我们认为：软件应可免费取得，软件工具在各种语言环境下皆可使用，且不会有任何功能上的差异；</p>
-			<p>人们应有定制和修改软件的自由，且方式不受限制，只要他们自认为合适。</p>
-			<p>Powered by phpBB © 2000, 2002, 2005, 2007 phpBB Group </p>
 		</div>
 	</div>
 </div>
+
+<%@ include file="/jsp/include/footer.jsp"%>
 </body>
 </html>
