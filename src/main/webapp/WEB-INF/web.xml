@@ -19,7 +19,8 @@
 		<param-value>
 			classpath:dataSourceBean.xml,
 			classpath:daoBean.xml,
-			classpath:serviceBean.xml
+			classpath:serviceBean.xml,
+			classpath:shiroBean.xml
 		</param-value>
 	</context-param>
 	
