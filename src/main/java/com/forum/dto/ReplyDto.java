@@ -1,4 +1,4 @@
-package com.forum.entity.reply;
+package com.forum.dto;
 
 import com.forum.entity.baseEntity.BaseEntity;
 
@@ -8,10 +8,12 @@ import com.forum.entity.baseEntity.BaseEntity;
  * @author Sackr
  *
  */
-public class Reply extends BaseEntity {
-	/** 回复编码 */
+public class ReplyDto extends BaseEntity {
+	/** 回复编码*/
 	private String code;
-	/** 回复内容 */
+	/** 回复楼层*/
+	private Integer floor;
+	/** 回复内容*/
 	private String replyContent;
 
 	public String getCode() {
@@ -20,6 +22,14 @@ public class Reply extends BaseEntity {
 
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	public Integer getFloor() {
+		return floor;
+	}
+
+	public void setFloor(Integer floor) {
+		this.floor = floor;
 	}
 
 	public String getReplyContent() {

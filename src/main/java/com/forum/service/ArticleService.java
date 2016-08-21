@@ -28,4 +28,8 @@ public class ArticleService extends BaseService {
 		art.setTitle(article.getTitle());
 		store.save(art);
 	}
+
+	public Article findArticleByCode(String code) {
+		return (Article) store.queryUniqueResultByHQL("FROM Article ar WHERE ar.code = :code", "code", code);
+	}
 }

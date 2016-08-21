@@ -13,4 +13,8 @@ public interface CodeType {
 	 * 帖子code
 	 */
 	public static final String ARTICLE_CODE = "AT";
+	/**
+	 * 回复code
+	 */
+	public static final String REPLY = "REP";
 }
