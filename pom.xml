@@ -5,6 +5,18 @@
 	<artifactId>forum</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
+	<repositories>
+		<repository>
+        <id>repo</id>
+        <url>http://repo1.maven.org/maven2</url>
+        <releases>
+           <enabled>true</enabled>
+        </releases>
+        <snapshots>
+          <enabled>false</enabled>
+        </snapshots>
+     </repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 		    <groupId>javax.servlet</groupId>
