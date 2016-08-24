@@ -1,0 +1,17 @@
+.headerwrap {
+	margin-top: -20px;
+	padding-top: 90px;
+}
+
+.headerwrap img {
+	margin-top: -2px;
+}
+
+.footer p {
+	padding: 0;
+	margin: 0;
+}
+
+.clear {
+	float: clear;
+}

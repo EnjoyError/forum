@@ -5,7 +5,6 @@
 <html>
 <head>
 	<%@ include file="/jsp/include/head.jsp"%>
-	<link href="${ctx}/css/index.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
