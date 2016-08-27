@@ -1,5 +1,9 @@
 package com.forum.service;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
+
 import com.forum.dto.UserDto;
 import com.forum.entity.user.User;
 import com.forum.util.CodeManager;
@@ -74,5 +78,14 @@ public class UserService extends BaseService {
 				username);
 		user.setPassword(userDto.getPassword());
 		store.save(user);
+	}
+
+	public void login(UserDto userDto) {
+		String username = userDto.getUsername();
+		String password = userDto.getPassword();
+		Boolean rememberMe = userDto.getRememberMe();
+		Subject subject = SecurityUtils.getSubject();
+		UsernamePasswordToken token = new UsernamePasswordToken(username, password, rememberMe);
+		subject.login(token); // 登录
 	}
 }

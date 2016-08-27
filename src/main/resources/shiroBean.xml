@@ -41,18 +41,36 @@
 		<property name="permissionsQuery"
 			value="SELECT CODE FROM role_permission left join roles using(ROLE_ID) left join permissions using(PERMISSION_ID) WHERE ROLE_NAME = ?"></property>
 	</bean>
+	<bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+		<constructor-arg value="sid" />
+		<property name="httpOnly" value="true" />
+		<property name="maxAge" value="-1" />
+	</bean>
+	<bean id="rememberMeCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+		<constructor-arg value="rememberMe" />
+		<property name="httpOnly" value="true" />
+		<property name="maxAge" value="2592000" /><!-- 30天 -->
+	</bean>
+	<!-- rememberMe管理器 -->
+	<bean id="rememberMeManager" class="org.apache.shiro.web.mgt.CookieRememberMeManager">
+		<property name="cipherKey"
+			value="#{T(org.apache.shiro.codec.Base64).decode('4AvVhmFLUs0KTA3Kprsdag==')}" />
+		<property name="cookie" ref="rememberMeCookie" />
+	</bean>
 
 	<!-- Shiro安全管理器 -->
 	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
 		<property name="realm" ref="jdbcRealm"></property>
 		<property name="cacheManager" ref="cacheManager"></property>
+		<property name="rememberMeManager" ref="rememberMeManager" />
 	</bean>
 
 	<bean id="formAuthenticationFilter"
 		class="org.apache.shiro.web.filter.authc.FormAuthenticationFilter">
 		<property name="usernameParam" value="username" />
 		<property name="passwordParam" value="password" />
-		<property name="loginUrl" value="/login.jsp" />
+		<property name="loginUrl" value="/jsp/login.jsp" />
+		<property name="rememberMeParam" value="rememberMe" />
 	</bean>
 
 	<!-- Shiro主过滤器本身功能十分强大，其强大之处就在于它支持任何基于URL路径表达式的、自定义的过滤器的执行 Web应用中，Shiro可控制的Web请求必须经过Shiro主过滤器的拦截，Shiro对基于Spring的Web应用提供了完美的支持 -->
@@ -72,8 +90,18 @@
 		<property name="unauthorizedUrl" value="/jsp/index.jsp"></property>
 		<property name="filterChainDefinitions">
 			<value>
+				/css/**=anon
+				/fonts/**=anon
+				/image/**=anon
+				/jsp/include/**=anon
+				/lib/angular/**=anon
+				/lib/bootstrap/**=anon
+				/lib/jquery/**=anon
 				/jsp/index.jsp=anon
-				/jsp/context.jsp=authc,roles[admin]
+				/jsp/test.jsp=anon
+				/jsp/login.jsp=anon
+				/jsp/register.jsp=user
+				/jsp/**=authc,roles[admin]
 			</value>
 		</property>
 	</bean>

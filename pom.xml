@@ -7,31 +7,31 @@
 	<packaging>war</packaging>
 	<repositories>
 		<repository>
-        <id>repo</id>
-        <url>http://repo1.maven.org/maven2</url>
-        <releases>
-           <enabled>true</enabled>
-        </releases>
-        <snapshots>
-          <enabled>false</enabled>
-        </snapshots>
-     </repository>
+			<id>repo</id>
+			<url>http://repo1.maven.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
-		    <groupId>javax.servlet</groupId>
-		    <artifactId>javax.servlet-api</artifactId>
-		    <version>3.1.0</version>
-		    <scope>provided</scope>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
-		    <groupId>javax.servlet</groupId>
-		    <artifactId>jstl</artifactId>
-		    <version>1.2</version>
-		    <scope>provided</scope>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -106,8 +106,23 @@
 			<artifactId>shiro-spring</artifactId>
 			<version>1.2.3</version>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.4.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.4.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.4.4</version>
+		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -122,19 +137,19 @@
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
-		      	<artifactId>jetty-maven-plugin</artifactId>
-		        <version>9.4.0.M0</version>
-		        <configuration>
-		        	<webAppSourceDirectory>src/main/webapp</webAppSourceDirectory>
-		        	<reload>manual</reload>
-		        	<scanIntervalSeconds>0</scanIntervalSeconds>
-		        	<webApp>
-		        		<contextPath>/forum</contextPath>
-		        	</webApp>
-		        	<httpConnector>
-		        		<port>8080</port>
-		        	</httpConnector>
-		        </configuration>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.4.0.M0</version>
+				<configuration>
+					<webAppSourceDirectory>src/main/webapp</webAppSourceDirectory>
+					<reload>manual</reload>
+					<scanIntervalSeconds>0</scanIntervalSeconds>
+					<webApp>
+						<contextPath>/forum</contextPath>
+					</webApp>
+					<httpConnector>
+						<port>8080</port>
+					</httpConnector>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
