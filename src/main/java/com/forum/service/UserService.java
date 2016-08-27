@@ -86,6 +86,11 @@ public class UserService extends BaseService {
 		Boolean rememberMe = userDto.getRememberMe();
 		Subject subject = SecurityUtils.getSubject();
 		UsernamePasswordToken token = new UsernamePasswordToken(username, password, rememberMe);
-		subject.login(token); // 登录
+		try {
+			subject.login(token); // 登录
+		} catch (Exception e) {
+			throw new ServiceException("登入失败，请检查用户名或密码是否正确!", e);
+		}
+
 	}
 }
