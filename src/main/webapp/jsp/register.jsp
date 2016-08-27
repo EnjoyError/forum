@@ -5,7 +5,6 @@
 <html>
 <head>
 	<%@ include file="/jsp/include/head.jsp"%>
-	<link href="${ctx}/css/index.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -16,7 +15,7 @@
 		<div class="row">
 			<div class="col-xs-1">
 				<img src="${ctx}/image/icon_mini_register.gif" alt="*" height="13" width="12">
-				<a href="#">登录</a>
+				<a href="${ctx}/jsp/login.jsp">登录</a>
 			</div>
 			<div class="col-xs-offset-11 text-center">
 				<img src="${ctx}/image/icon_mini_faq.gif" alt="*" height="13" width="12">

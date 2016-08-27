@@ -5,7 +5,7 @@
 <html>
 <head>
 	<%@ include file="/jsp/include/head.jsp"%>
-	<link href="${ctx}/css/index.css" rel="stylesheet" type="text/css" />
+	<link href="${ctx}/css/plate.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <%@ include file="/jsp/include/navbar.jsp"%>
@@ -19,7 +19,7 @@
 			</div>
 			<div class="col-xs-1">
 				<img src="${ctx}/image/icon_mini_register.gif" alt="*" height="13" width="12" />
-				<a href="${ctx}/jsp/login.jsp">登录</a>
+				<a href="#">登录</a>
 			</div>
 			<div class="col-xs-offset-11 text-center">
 				<img src="${ctx}/image/icon_mini_faq.gif" alt="*" height="13" width="12" />
@@ -36,158 +36,71 @@
 			</div>
 		</div>
 		
+		<div class="row">
+			<div class="col-xs-1 topic-img">
+				<img src="${ctx}/image/button_topic_new.gif" />
+			</div>
+			<div class="col-xs-3 topic-num">
+				<p>分页： 1 / 77 [ 3817 个主题 ]</p>
+			</div>
+			<div class="col-xs-offset-1 topic-context">
+				<div>
+					<p>显示主题:</p>
+					<select>
+						<option>全部主题</option>
+					</select>
+				</div>
+				<div>
+					<p>排序</p>
+					<select>
+						<option>发表时间</option>
+					</select>
+				</div>
+				<div>
+					<select>
+						<option>降序</option>
+						<option>升序</option>
+					</select>
+				</div>
+				<div>
+					<button>GO</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<p></p>
+		</div>
+		
 		<ul class="list-group">
 			<li class="list-group-item">
 				<div class="row">
-					<div class="col-xs-8">
-						<p>版面</p>
-					</div>
-					<div class="col-xs-1">
+					<div class="col-xs-8 text-center">
 						<p>主题</p>
 					</div>
 					<div class="col-xs-1">
-						<p>帖子</p>
+						<p>作者</p>
 					</div>
-					<div class="col-xs-2">
-						<p>最新文章</p>
+					<div class="col-xs-1">
+						<p>回复总数</p>
 					</div>
-				</div>
-			</li>
-		</ul>
-	
-		<ul class="list-group">
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-8">
-						<p>公告/注意事项</p>
+					<div class="col-xs-1">
+						<p>阅读次数</p>
 					</div>
-					<div class="col-xs-4">
-						<p></p>
+					<div class="col-xs-1">
+						<p>最新文章 </p>
 					</div>
 				</div>
 			</li>
 			<li class="list-group-item">
-				<div class="row topic">
-					<div class="col-xs-1">
-						<img src="${ctx}/image/forum_read_subforum.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
-					</div>
-					<div class="col-xs-7">
-						<h4><a href="${ctx}/jsp/plate.jsp">新闻和通知</a></h4>
-						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
+				<div class="row topic-type">
+					<h3>公告</h3>
 				</div>
 			</li>
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/forum_read_subforum.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
-					</div>
-					<div class="col-xs-7">
-						<h4><a href="${ctx}/jsp/plate.jsp">新闻和通知</a></h4>
-						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row topic">
-					<div class="col-xs-1">
-						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
-					</div>
-					<div class="col-xs-7">
-						<h4><a href="${ctx}/jsp/plate.jsp">新闻和通知</a></h4>
-						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row topic">
-					<div class="col-xs-1">
-						<img src="${ctx}/image/forum_read_subforum.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
-					</div>
-					<div class="col-xs-7">
-						<h4><a href="${ctx}/jsp/plate.jsp">新闻和通知</a></h4>
-						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-		</ul>
-		
-		<ul class="list-group">
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-8">
-						<p>公告/注意事项</p>
-					</div>
-					<div class="col-xs-4">
-						<p></p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row topic">
-					<div class="col-xs-1">
-						<img src="${ctx}/image/forum_read_subforum.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
-					</div>
-					<div class="col-xs-7">
-						<h4><a href="${ctx}/jsp/plate.jsp">新闻和通知</a></h4>
-						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
-					</div>
-					<div class="col-xs-1">
-						<p>3817</p>
-					</div>
-					<div class="col-xs-1">
-						<p>56928</p>
-					</div>
-					<div class="col-xs-2">
-						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row topic">
-					<div class="col-xs-1">
-						<img src="${ctx}/image/forum_read_subforum.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+						<img src="${ctx}/image/announce_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -199,16 +112,18 @@
 					<div class="col-xs-1">
 						<p>56928</p>
 					</div>
-					<div class="col-xs-2">
+					<div class="col-xs-1">
 						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
+					</div>
+					<div class="col-xs-1">
+						<p>查看最新帖子</p>
 					</div>
 				</div>
 			</li>
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+						<img src="${ctx}/image/announce_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -220,16 +135,18 @@
 					<div class="col-xs-1">
 						<p>56928</p>
 					</div>
-					<div class="col-xs-2">
+					<div class="col-xs-1">
 						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
+					</div>
+					<div class="col-xs-1">
+						<p>查看最新帖子</p>
 					</div>
 				</div>
 			</li>
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+						<img src="${ctx}/image/announce_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -241,29 +158,23 @@
 					<div class="col-xs-1">
 						<p>56928</p>
 					</div>
-					<div class="col-xs-2">
+					<div class="col-xs-1">
 						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
+					</div>
+					<div class="col-xs-1">
+						<p>查看最新帖子</p>
 					</div>
 				</div>
 			</li>
-		</ul>
-		
-		<ul class="list-group">
 			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-8">
-						<p>公告/注意事项</p>
-					</div>
-					<div class="col-xs-4">
-						<p></p>
-					</div>
+				<div class="row topic-type">
+					<h3>主题</h3>
 				</div>
 			</li>
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+						<img src="${ctx}/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -275,16 +186,18 @@
 					<div class="col-xs-1">
 						<p>56928</p>
 					</div>
-					<div class="col-xs-2">
+					<div class="col-xs-1">
 						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
+					</div>
+					<div class="col-xs-1">
+						<p>查看最新帖子</p>
 					</div>
 				</div>
 			</li>
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+						<img src="${ctx}/image/sticky_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -296,16 +209,18 @@
 					<div class="col-xs-1">
 						<p>56928</p>
 					</div>
-					<div class="col-xs-2">
+					<div class="col-xs-1">
 						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
+					</div>
+					<div class="col-xs-1">
+						<p>查看最新帖子</p>
 					</div>
 				</div>
 			</li>
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+						<img src="${ctx}/image/topic_moved.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -317,16 +232,18 @@
 					<div class="col-xs-1">
 						<p>56928</p>
 					</div>
-					<div class="col-xs-2">
+					<div class="col-xs-1">
 						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
+					</div>
+					<div class="col-xs-1">
+						<p>查看最新帖子</p>
 					</div>
 				</div>
 			</li>
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
+						<img src="${ctx}/image/topic_read_hot.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -338,76 +255,149 @@
 					<div class="col-xs-1">
 						<p>56928</p>
 					</div>
-					<div class="col-xs-2">
+					<div class="col-xs-1">
 						<p>2016-08-12 8:48</p>
-						<p>onlylove 查看最新帖子</p>
 					</div>
-				</div>
-			</li>
-		</ul>
-	
-		<ul class="list-group">
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-12">
-						<p>在线用户</p>
+					<div class="col-xs-1">
+						<p>查看最新帖子</p>
 					</div>
 				</div>
 			</li>
 			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1 online">
-						<img src="${ctx}/image/whosonline.gif" alt="没有未读文章" title="在线用户" height="25" width="46" />
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/topic_read_locked.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
-					<div class="col-xs-11">
-						<p>线上共有 16 位用户：11 位注册用户，0 位隐身用户和 5 位游客 (基于过去 5 分钟内的用户活动记录)</p>
-						<p>最高在线记录：5167，发生于 2008-08-15 5:57</p>
-						<p>&nbsp;</p>
-						<p>注册用户： Baidu [Spider], Bing [Bot], Exabot [Bot], Google [Bot], Google Feedfetcher, KBTyanhuo, onlylove, poloshiao, Sogou [Spider], Yahoo [Bot], 科学之子</p>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-1">
+						<p>2016-08-12 8:48</p>
+					</div>
+					<div class="col-xs-1">
+						<p>查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-1">
+						<p>2016-08-12 8:48</p>
+					</div>
+					<div class="col-xs-1">
+						<p>查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-1">
+						<p>2016-08-12 8:48</p>
+					</div>
+					<div class="col-xs-1">
+						<p>查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-1">
+						<p>2016-08-12 8:48</p>
+					</div>
+					<div class="col-xs-1">
+						<p>查看最新帖子</p>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="row topic">
+					<div class="col-xs-1">
+						<img src="${ctx}/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
+					</div>
+					<div class="col-xs-7">
+						<h4><a href="#">新闻和通知</a></h4>
+						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
+					</div>
+					<div class="col-xs-1">
+						<p>3817</p>
+					</div>
+					<div class="col-xs-1">
+						<p>56928</p>
+					</div>
+					<div class="col-xs-1">
+						<p>2016-08-12 8:48</p>
+					</div>
+					<div class="col-xs-1">
+						<p>查看最新帖子</p>
 					</div>
 				</div>
 			</li>
 		</ul>
 		
-		<ul class="list-group">
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-12">
-						<p>统计信息</p>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-1 statistics">
-						<img src="${ctx}/image/whosonline.gif" alt="没有未读文章" title="统计信息" height="25" width="46" />
-					</div>
-					<div class="col-xs-11">
-						<p>帖子总数：3011819 | 主题总数：386335 | 注册用户总数：508016 | 最新注册的用户：null</p>
-					</div>
-				</div>
-			</li>
-		</ul>
+		<div class="row topic-page">
+			<ul class="pagination">
+			    <li><a href="#">&laquo;</a></li>
+			    <li><a href="#">1</a></li>
+			    <li class="disabled"><a href="#">2</a></li>
+			    <li><a href="#">3</a></li>
+			    <li><a href="#">4</a></li>
+			    <li><a href="#">5</a></li>
+			    <li><a href="#">&raquo;</a></li>
+			</ul>
+		</div>
 		
-		<div class="row">
-			<div class="col-xs-12 text-center">
-				<div class="col-xs-4">
-					<div>
-						<p>有新帖</p>
-					</div>
-				</div>
-				<div class="col-xs-4">
-					<div class="posttype">
-						<img src="${ctx}/image/forum_read.gif" alt="没有未读文章" title="没有未读文章" height="25" width="46" />
-						<p>无新帖</p>
-					</div>
-				</div>
-				<div class="col-xs-4">
-					<div class="posttype">
-						<img src="${ctx}/image/forum_read_locked.gif" alt="无新帖 [ 锁定 ]" title="无新帖 [ 锁定 ]" height="25" width="46" />
-						<p>版面锁定</p>
-					</div>
-				</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">在线用户</h3>
+			</div>
+			<div class="panel-body">
+				正在浏览此版面的用户：MSNbot Media 和 2 位游客
 			</div>
 		</div>
 	</div>

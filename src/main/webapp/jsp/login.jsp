@@ -5,10 +5,10 @@
 <html>
 <head>
 	<%@ include file="/jsp/include/head.jsp"%>
-	<link href="${ctx}/css/index.css" rel="stylesheet" type="text/css" />
+	<script src="${ctx}/js/login.js"></script>
 </head>
 
-<body>
+<body ng-app="webApp" ng-controller="loginCtrl">
 <%@ include file="/jsp/include/navbar.jsp"%>
 
 <div class="headerwrap">
@@ -42,6 +42,12 @@
 				</div>
 			</li>
 			
+			<li class="list-group-item" id="alert">
+				<div class="row">
+					<div class="alert alert-success"></div>
+				</div>
+			</li>
+			
 			<li class="list-group-item">
 				<div class="row">
 					<div class="col-xs-4">
@@ -49,7 +55,8 @@
 					</div>
 					<div class="col-xs-8">
 						<div>
-							<input type="text" />
+							<input type="text" id="username"
+								ng-model="username" ng-focus="hideUserTip()" />
 						</div>
 						<div>
 							<a href="${ctx}/jsp/register.jsp">注册</a>
@@ -65,16 +72,14 @@
 					</div>
 					<div class="col-xs-8">
 						<div>
-							<input type="text" />
+							<input type="text" id="password"
+								ng-model="password" ng-focus="hidePasswordTip()"/>
 						</div>
 						<div>
 							<a href="#">我忘记了自己的密码</a>
 						</div>
 						<div>
-							<input type="checkbox" />每次浏览时自动登录
-						</div>
-						<div>
-							<input type="checkbox" />在这次登录中隐藏我的在线状态
+							<input type="checkbox" ng-model="rememberMe" />每次浏览时自动登录
 						</div>
 					</div>
 				</div>
@@ -83,7 +88,7 @@
 			<li class="list-group-item">
 				<div class="row text-center">
 					<div class="col-xs-12">
-						<button type="button" class="btn btn-primary">登录</button>
+						<button type="button" class="btn btn-primary" ng-click="login()">登录</button>
 					</div>
 				</div>
 			</li>
