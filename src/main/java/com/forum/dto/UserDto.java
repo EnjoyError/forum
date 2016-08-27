@@ -9,6 +9,15 @@ public class UserDto {
 	private String username;
 	private String password;
 	private String oldPassword;
+	private Boolean rememberMe;
+
+	public Boolean getRememberMe() {
+		return rememberMe;
+	}
+
+	public void setRememberMe(Boolean rememberMe) {
+		this.rememberMe = rememberMe;
+	}
 
 	public String getOldPassword() {
 		return oldPassword;
