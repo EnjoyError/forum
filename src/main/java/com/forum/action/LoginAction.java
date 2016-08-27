@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.forum.dto.UserDto;
 import com.forum.service.UserService;
+import com.forum.util.CurrentRequestType;
+import com.forum.util.RequestType;
 
 @Controller
 @RequestMapping("/login.action")
@@ -26,6 +28,7 @@ public class LoginAction {
 	@ResponseBody
 	@RequestMapping(params = "method=login", method = { RequestMethod.POST })
 	public Map<String, Object> login(@RequestBody UserDto userDto) {
+		CurrentRequestType.setCurrentRequestType(RequestType.AJAX);
 		userService.login(userDto);
 		Map<String, Object> result = new HashMap<String, Object>();
 		result.put("success", true);
