@@ -90,18 +90,13 @@
 		<property name="unauthorizedUrl" value="/jsp/index.jsp"></property>
 		<property name="filterChainDefinitions">
 			<value>
-				/css/**=anon
-				/fonts/**=anon
-				/image/**=anon
-				/jsp/include/**=anon
-				/lib/angular/**=anon
-				/lib/bootstrap/**=anon
-				/lib/jquery/**=anon
-				/jsp/index.jsp=anon
-				/jsp/test.jsp=anon
-				/jsp/login.jsp=anon
-				/jsp/register.jsp=user
-				/jsp/**=authc,roles[admin]
+				/static/** = anon
+				/lib/** = anon
+				/jsp/* = anon
+				/ = anon
+				/user.action = anon
+				/login.action = anon
+				/** = authc,roles[admin]
 			</value>
 		</property>
 	</bean>

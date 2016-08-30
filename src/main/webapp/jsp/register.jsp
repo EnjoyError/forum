@@ -14,11 +14,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-1">
-				<img src="${ctx}/image/icon_mini_register.gif" alt="*" height="13" width="12">
+				<img src="${ctx}/static/image/icon_mini_register.gif" alt="*" height="13" width="12">
 				<a href="${ctx}/jsp/login.jsp">登录</a>
 			</div>
 			<div class="col-xs-offset-11 text-center">
-				<img src="${ctx}/image/icon_mini_faq.gif" alt="*" height="13" width="12">
+				<img src="${ctx}/static/image/icon_mini_faq.gif" alt="*" height="13" width="12">
 				<a href="#">FAQ</a>
 			</div>
 		</div>
@@ -104,7 +104,7 @@
 			<li class="list-group-item">
 				<div class="row">
 					<div class="col-xs-offset-4">
-						<img src="${ctx}/image/ucp.png" alt="验证码" />
+						<img src="${ctx}/static/image/ucp.png" alt="验证码" />
 					</div>
 				</div>
 			</li>
