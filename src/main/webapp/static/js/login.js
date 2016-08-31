@@ -41,8 +41,8 @@ app.controller('loginCtrl', function($scope, tipService) {
 			return;
 		}
 		
-		if (!/^[a-zA-Z]\w{7,}/.test($scope.username)) {
-			tipService.showTip('#username', '用户名必须是字母和数字的组合且以字母开头，长度必须大于7位');
+		if (!/\w{4,20}/.test($scope.username)) {
+			tipService.showTip('#username', '用户名为3～20个字符(字母和数字)');
 			return;
 		}
 		
@@ -51,23 +51,23 @@ app.controller('loginCtrl', function($scope, tipService) {
 			return;
 		}
 		
-		if (!/\w{8,}/.test($scope.password)) {
-			tipService.showTip('#password', '密码必须大于7位');
+		if (!/\w{6,}/.test($scope.password)) {
+			tipService.showTip('#password', '密码必须大于6位');
 			return;
 		}
 		
 		var userData = {username: $scope.username, password: $scope.password, rememberMe: $scope.rememberMe};
 		$.ajax({
 			type: 'post',
-			url: golable.ctx + '/login.action?method=login',
+			url: global.ctx + '/login.action?method=login',
 			dataType:"json",
 			contentType:"application/json",
 			data: JSON.stringify(userData),
 			success: function(data) {
 				if (data.success) {
-					window.location.href = golable.ctx + '/jsp/index.jsp';
+					window.location.href = global.ctx + '/jsp/index.jsp';
 				} else {
-					tipService.showAlert('登录失败, 用户名或密码错误');
+					tipService.showAlert(data.message);
 				}
 			}
 		});
