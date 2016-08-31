@@ -5,9 +5,10 @@
 <html>
 <head>
 	<%@ include file="/jsp/include/head.jsp"%>
+	<script src="${ctx}/static/js/register.js"></script>
 </head>
 
-<body>
+<body ng-app="webApp" ng-controller="registerCtrl">
 <%@ include file="/jsp/include/navbar.jsp"%>
 
 <div class="headerwrap">
@@ -47,7 +48,8 @@
 						<p>用户名:</p>
 					</div>
 					<div class="col-xs-8">
-						<input type="text" placeholder="3～20个字符之间" />
+						<input type="text" placeholder="3～20个字符之间"
+							ng-model="username" />
 					</div>
 				</div>
 			</li>
@@ -58,7 +60,7 @@
 						<p>Email 地址:</p>
 					</div>
 					<div class="col-xs-8">
-						<input type="text" />
+						<input type="text" ng-model="email" />
 					</div>
 				</div>
 			</li>
@@ -69,7 +71,8 @@
 						<p>密码:</p>
 					</div>
 					<div class="col-xs-8">
-						<input type="text" placeholder="6～30个字符之间" />
+						<input type="password" placeholder="6～30个字符之间" 
+							ng-model="password" />
 					</div>
 				</div>
 			</li>
@@ -80,7 +83,7 @@
 						<p>确认新密码:</p>
 					</div>
 					<div class="col-xs-8">
-						<input type="text" />
+						<input type="password" ng-model="repassword" />
 					</div>
 				</div>
 			</li>
@@ -104,7 +107,7 @@
 			<li class="list-group-item">
 				<div class="row">
 					<div class="col-xs-offset-4">
-						<img src="${ctx}/static/image/ucp.png" alt="验证码" />
+						<img src="${ctx}/static/image/ucp.png" alt="验证码" id="captchaImg"  />
 					</div>
 				</div>
 			</li>
@@ -115,8 +118,9 @@
 						<p>验证码:</p>
 					</div>
 					<div class="col-xs-8">
-						<input type="text" placeholder="不区分大小写" maxLength="4" />
-						<button type="button" class="btn btn-primary">刷新验证码</button>
+						<input type="text" placeholder="不区分大小写" maxLength="4" 
+							ng-model="captcha" />
+						<button type="button" class="btn btn-primary" ng-click="refresh()">刷新验证码</button>
 					</div>
 				</div>
 			</li>
@@ -124,12 +128,35 @@
 			<li class="list-group-item">
 				<div class="row text-center">
 					<div class="col-xs-12">
-						<button type="button" class="btn btn-primary">提交</button>
-						<button type="button" class="btn btn-primary">重置</button>
+						<button type="button" class="btn btn-primary" ng-click="submit()">提交</button>
+						<button type="button" class="btn btn-primary" ng-click="reset()">重置</button>
 					</div>
 				</div>
 			</li>
 		</ul>
+	</div>
+</div>
+
+<div class="modal fade" id="prompt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					提示信息
+				</h4>
+			</div>
+			<div class="modal-body">
+				<p id="prompt-msg"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">
+					关闭
+				</button>
+			</div>
+		</div>
 	</div>
 </div>
 

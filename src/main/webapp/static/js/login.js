@@ -41,6 +41,11 @@ app.controller('loginCtrl', function($scope, tipService) {
 			return;
 		}
 		
+		if (!/\w{4,20}/.test($scope.username)) {
+			tipService.showTip('#username', '用户名为3～20个字符(字母和数字)');
+			return;
+		}
+		
 		if ($.trim($scope.password) == '') {
 			tipService.showTip('#password', '密码不能为空');
 			return;
@@ -54,14 +59,13 @@ app.controller('loginCtrl', function($scope, tipService) {
 		var userData = {username: $scope.username, password: $scope.password, rememberMe: $scope.rememberMe};
 		$.ajax({
 			type: 'post',
-			url: golable.ctx + '/login.action?method=login',
+			url: global.ctx + '/login.action?method=login',
 			dataType:"json",
 			contentType:"application/json",
 			data: JSON.stringify(userData),
 			success: function(data) {
-				debugger;
 				if (data.success) {
-					window.location.href = golable.ctx + '/jsp/index.jsp';
+					window.location.href = global.ctx + '/jsp/index.jsp';
 				} else {
 					tipService.showAlert(data.message);
 				}

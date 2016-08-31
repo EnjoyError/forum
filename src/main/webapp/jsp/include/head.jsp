@@ -9,6 +9,6 @@
 <script type="text/javascript" src="${ctx}/lib/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="${ctx}/lib/angular/angular.js"></script>
 <script type="text/javascript">
-	var golable = {};
-	golable.ctx = '${ctx}';
+	var global = {};
+	global.ctx = '${ctx}';
 </script>

@@ -96,6 +96,7 @@
 				/ = anon
 				/user.action = anon
 				/login.action = anon
+				/captcha.action = anon
 				/** = authc,roles[admin]
 			</value>
 		</property>
