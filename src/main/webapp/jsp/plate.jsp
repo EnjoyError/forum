@@ -5,7 +5,7 @@
 <html>
 <head>
 	<%@ include file="/jsp/include/head.jsp"%>
-	<link href="${ctx}/css/plate.css" rel="stylesheet" type="text/css" />
+	<link href="${ctx}/static/css/plate.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <%@ include file="/jsp/include/navbar.jsp"%>
@@ -14,15 +14,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-1">
-				<img src="${ctx}/image/icon_mini_login.gif" alt="*" height="13" width="12" />
+				<img src="${ctx}/static/image/icon_mini_login.gif" alt="*" height="13" width="12" />
 				<a href="${ctx}/jsp/register.jsp">注册</a>
 			</div>
 			<div class="col-xs-1">
-				<img src="${ctx}/image/icon_mini_register.gif" alt="*" height="13" width="12" />
+				<img src="${ctx}/static/image/icon_mini_register.gif" alt="*" height="13" width="12" />
 				<a href="#">登录</a>
 			</div>
 			<div class="col-xs-offset-11 text-center">
-				<img src="${ctx}/image/icon_mini_faq.gif" alt="*" height="13" width="12" />
+				<img src="${ctx}/static/image/icon_mini_faq.gif" alt="*" height="13" width="12" />
 				<a href="#">FAQ</a>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 		
 		<div class="row">
 			<div class="col-xs-1 topic-img">
-				<img src="${ctx}/image/button_topic_new.gif" />
+				<img src="${ctx}/static/image/button_topic_new.gif" />
 			</div>
 			<div class="col-xs-3 topic-num">
 				<p>分页： 1 / 77 [ 3817 个主题 ]</p>
@@ -100,7 +100,7 @@
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/announce_read.gif" alt="没有未读文章" title="没有未读文章" />
+						<img src="${ctx}/static/image/announce_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -123,7 +123,7 @@
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/announce_read.gif" alt="没有未读文章" title="没有未读文章" />
+						<img src="${ctx}/static/image/announce_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -146,7 +146,7 @@
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/announce_read.gif" alt="没有未读文章" title="没有未读文章" />
+						<img src="${ctx}/static/image/announce_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -174,7 +174,7 @@
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
+						<img src="${ctx}/static/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -197,7 +197,7 @@
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/sticky_read.gif" alt="没有未读文章" title="没有未读文章" />
+						<img src="${ctx}/static/image/sticky_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -220,7 +220,7 @@
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/topic_moved.gif" alt="没有未读文章" title="没有未读文章" />
+						<img src="${ctx}/static/image/topic_moved.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -243,7 +243,7 @@
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/topic_read_hot.gif" alt="没有未读文章" title="没有未读文章" />
+						<img src="${ctx}/static/image/topic_read_hot.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -266,7 +266,7 @@
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/topic_read_locked.gif" alt="没有未读文章" title="没有未读文章" />
+						<img src="${ctx}/static/image/topic_read_locked.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -289,7 +289,7 @@
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
+						<img src="${ctx}/static/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -312,7 +312,7 @@
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
+						<img src="${ctx}/static/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -335,7 +335,7 @@
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
+						<img src="${ctx}/static/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>
@@ -358,7 +358,7 @@
 			<li class="list-group-item">
 				<div class="row topic">
 					<div class="col-xs-1">
-						<img src="${ctx}/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
+						<img src="${ctx}/static/image/topic_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
 						<h4><a href="#">新闻和通知</a></h4>

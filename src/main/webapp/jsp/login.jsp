@@ -5,7 +5,7 @@
 <html>
 <head>
 	<%@ include file="/jsp/include/head.jsp"%>
-	<script src="${ctx}/js/login.js"></script>
+	<script src="${ctx}/static/js/login.js"></script>
 </head>
 
 <body ng-app="webApp" ng-controller="loginCtrl">
@@ -15,11 +15,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-1">
-				<img src="${ctx}/image/icon_mini_register.gif" alt="*" height="13" width="12">
-				<a href="#">登录</a>
+				<img src="${ctx}/static/image/icon_mini_register.gif" alt="*" height="13" width="12">
+				<a href="${ctx}/jsp/register.jsp">注册</a>
 			</div>
 			<div class="col-xs-offset-11 text-center">
-				<img src="${ctx}/image/icon_mini_faq.gif" alt="*" height="13" width="12">
+				<img src="${ctx}/static/image/icon_mini_faq.gif" alt="*" height="13" width="12">
 				<a href="#">FAQ</a>
 			</div>
 		</div>
@@ -72,7 +72,7 @@
 					</div>
 					<div class="col-xs-8">
 						<div>
-							<input type="text" id="password"
+							<input type="password" id="password"
 								ng-model="password" ng-focus="hidePasswordTip()"/>
 						</div>
 						<div>
