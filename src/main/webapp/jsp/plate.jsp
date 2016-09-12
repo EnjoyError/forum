@@ -5,7 +5,6 @@
 <html>
 <head>
 	<%@ include file="/jsp/include/head.jsp"%>
-	<link href="${ctx}/static/css/plate.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <%@ include file="/jsp/include/navbar.jsp"%>
@@ -103,7 +102,7 @@
 						<img src="${ctx}/static/image/announce_read.gif" alt="没有未读文章" title="没有未读文章" />
 					</div>
 					<div class="col-xs-7">
-						<h4><a href="#">新闻和通知</a></h4>
+						<h4><a href="${ctx}/jsp/article.jsp">新闻和通知</a></h4>
 						<span>最新ubuntu/linux/开源新闻或者其它IT相关资讯</span>
 					</div>
 					<div class="col-xs-1">
@@ -397,7 +396,7 @@
 				<h3 class="panel-title">在线用户</h3>
 			</div>
 			<div class="panel-body">
-				正在浏览此版面的用户：MSNbot Media 和 2 位游客
+				<p>正在浏览此版面的用户：MSNbot Media 和 2 位游客<p>
 			</div>
 		</div>
 	</div>
