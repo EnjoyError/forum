@@ -1,0 +1,51 @@
+.ucp-nav-left {
+	display: inline;
+}
+
+.ucp-nav-left div {
+	display: inline;
+}
+
+.ucp-nav-right div img {
+	padding-left: 0px;
+	padding-right: 0.05px;
+}
+
+.ucp-nav-left div a {
+	padding-left: 0.05px;
+	padding-right: 2px;
+}
+
+.ucp-nav-right {
+	display: inline;
+	text-align: right;
+}
+
+.ucp-nav-right div {
+	display: inline;
+}
+
+.ucp-notice-text img {
+	display: inline;
+}
+
+.ucp-notice-text p {
+	display: inline;
+}
+
+.ucp-notice-text img {
+}
+
+.ucp-nav-right div img {
+	padding-left: 2px;
+	padding-right: 0.05px;
+}
+
+.ucp-nav-right div a {
+	padding-left: 0.05px;
+	padding-right: 0px;
+}
+
+.ucp-body {
+	height: 675px;
+}
