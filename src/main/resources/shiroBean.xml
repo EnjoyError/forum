@@ -94,8 +94,8 @@
 				/lib/** = anon
 				/jsp/* = anon
 				/ = anon
-				/user.action = anon
-				/login.action = anon
+				/user/login = anon
+				/user/register = anon
 				/captcha.action = anon
 				/** = authc,roles[admin]
 			</value>

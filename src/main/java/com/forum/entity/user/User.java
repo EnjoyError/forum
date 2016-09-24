@@ -18,8 +18,18 @@ public class User extends BaseEntity {
 	private String username;
 	/** 用户密码 */
 	private String password;
+	/** email */
+	private String email;
 	/** 用户拥有的角色 */
 	private Set<Role> roles;
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public String getCode() {
 		return code;

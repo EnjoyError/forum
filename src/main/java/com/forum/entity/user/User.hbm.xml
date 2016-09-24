@@ -13,6 +13,8 @@
 			length="50" />
 		<property name="password" column="PASSWORD" type="string"
 			length="50" />
+		<property name="email" column="EMAIL" type="string"
+			length="50" />
 		<set name="roles" table="role_user" lazy="true">
 			<key column="USER_ID" />
 			<many-to-many class="com.forum.entity.role.Role" column="ROLE_ID" />

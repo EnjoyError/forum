@@ -2,6 +2,7 @@ package com.forum.service;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.subject.Subject;
 
 import com.forum.dto.UserDto;
@@ -39,6 +40,8 @@ public class UserService extends BaseService {
 		if (null != user) {
 			throw new ServiceException("该用户名已被注册");
 		}
+		SimpleHash sh = new SimpleHash("MD5", password.toCharArray(), null, 1);
+		password = sh.toHex();
 		user = new User();
 		user.setCode(CodeManager.generateCode(CodeType.USER_CODE));
 		user.setUsername(username);
