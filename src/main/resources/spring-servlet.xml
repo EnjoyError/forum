@@ -29,7 +29,7 @@
 	
 	<!-- 静态资源的访问 -->
 	<mvc:resources mapping="/lib/**" location="/lib/" />
-	<mvc:resources mapping="/static/**" location="/static" />
+	<mvc:resources mapping="/static/**" location="/static/" />
 
 	<mvc:annotation-driven />
 	
