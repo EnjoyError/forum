@@ -11,7 +11,7 @@
 
 <div class="headerwrap">
 	<div class="container">
-		<div class="row">
+		<div class="row headerwrap-nav">
 			<div class="col-xs-1">
 				<img src="${ctx}/static/image/icon_mini_login.gif" alt="*" height="13" width="12" />
 				<a href="${ctx}/jsp/register.jsp">注册</a>
