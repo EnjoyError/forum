@@ -24,10 +24,15 @@
     http://www.springframework.org/schema/mvc/spring-mvc.xsd ">
 
 	<!-- 启用spring mvc 注解 -->
+	
 	<context:annotation-config />
+	
+	<!-- 静态资源的访问 -->
+	<mvc:resources mapping="/lib/**" location="/lib/" />
+	<mvc:resources mapping="/static/**" location="/static" />
 
 	<mvc:annotation-driven />
-
+	
 	<!-- 设置使用注解的类所在的jar包 -->
 	<context:component-scan base-package="com.forum.action"></context:component-scan>
 	<!-- 异常处理 -->
@@ -37,4 +42,6 @@
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/jsp/" p:suffix=".jsp" />
+		
+	
 </beans>

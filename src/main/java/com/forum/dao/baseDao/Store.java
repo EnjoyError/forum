@@ -1,12 +1,10 @@
 package com.forum.dao.baseDao;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import com.forum.entity.baseEntity.BaseEntity;
-import com.forum.util.ParamUtil;
 import com.forum.util.ServiceException;
 
 /**
@@ -15,6 +13,7 @@ import com.forum.util.ServiceException;
  * @author Sackr
  *
  */
+@SuppressWarnings("unchecked")
 public class Store extends HibernateDaoSupport {
 	/**
 	 * 保存
@@ -30,19 +29,12 @@ public class Store extends HibernateDaoSupport {
 		return (BaseEntity) getHibernateTemplate().get(clazz, id);
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	private List<BaseEntity> queryByHQL(String HQL, Map paramMap) {
-		List<BaseEntity> list;
-		list = getHibernateTemplate().find(HQL, paramMap);
-		return list;
-	}
-
 	public List<BaseEntity> queryByHQL(String HQL, String[] keys, Object[] values) {
-		return queryByHQL(HQL, ParamUtil.getParam(keys, values));
+		return getHibernateTemplate().findByNamedParam(HQL, keys, values);
 	}
 
 	public List<BaseEntity> queryByHQL(String HQL, String key, Object value) {
-		return queryByHQL(HQL, ParamUtil.getParam(new String[] { key }, new Object[] { value }));
+		return getHibernateTemplate().findByNamedParam(HQL, key, value);
 	}
 
 	public BaseEntity queryUniqueResultByHQL(String HQL, String key, Object value) {
@@ -50,13 +42,17 @@ public class Store extends HibernateDaoSupport {
 	}
 
 	public BaseEntity queryUniqueResultByHQL(String HQL, String[] keys, Object[] values) {
-		List<BaseEntity> list = queryByHQL(HQL, ParamUtil.getParam(keys, values));
+		List<BaseEntity> list = getHibernateTemplate().findByNamedParam(HQL, keys, values);
 		if (null == list) {
 			return null;
 		}
 		if (list.size() > 1) {
 			throw new ServiceException("查询结果不唯一");
 		}
-		return list.get(0);
+		if (list.size() == 1) {
+			return list.get(0);
+		}
+
+		return null;
 	}
 }
