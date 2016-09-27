@@ -59,13 +59,13 @@ app.controller('loginCtrl', function($scope, tipService) {
 		var userData = {username: $scope.username, password: $scope.password, rememberMe: $scope.rememberMe};
 		$.ajax({
 			type: 'post',
-			url: global.ctx + '/login.action?method=login',
+			url: global.ctx + '/user/login',
 			dataType:"json",
 			contentType:"application/json",
 			data: JSON.stringify(userData),
 			success: function(data) {
 				if (data.success) {
-					window.location.href = global.ctx + '/jsp/index.jsp';
+					window.location.href = global.ctx + '/index';
 				} else {
 					tipService.showAlert(data.message);
 				}

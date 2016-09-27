@@ -1,24 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ include file="/jsp/include/global.jsp"%>
+<%@ include file="include/global.jsp"%>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<%@ include file="/jsp/include/head.jsp"%>
+	<%@ include file="include/head.jsp"%>
 </head>
 <body>
-<%@ include file="/jsp/include/navbar.jsp"%>
+<%@ include file="include/navbar.jsp"%>
 
 <div class="headerwrap">
 	<div class="container">
 		<div class="row headerwrap-nav">
 			<div class="col-xs-1">
 				<img src="${ctx}/static/image/icon_mini_login.gif" alt="*" height="13" width="12" />
-				<a href="${ctx}/jsp/register.jsp">注册</a>
+				<a href="${ctx}/register">注册</a>
 			</div>
 			<div class="col-xs-1">
 				<img src="${ctx}/static/image/icon_mini_register.gif" alt="*" height="13" width="12" />
-				<a href="${ctx}/jsp/login.jsp">登录</a>
+				<a href="${ctx}/login">登录</a>
 			</div>
 			<div class="col-xs-offset-11 text-center">
 				<img src="${ctx}/static/image/icon_mini_faq.gif" alt="*" height="13" width="12" />
@@ -28,7 +28,7 @@
 		
 		<div class="row">
 			<div class="col-xs-1">
-				<a href="${ctx}/">首页</a>
+				<a href="${ctx}/index">首页</a>
 			</div>
 			<div class="col-xs-offset-10 text-center">
 				<p>当前时区为 UTC + 8 小时</p>
@@ -217,6 +217,6 @@
 	</div>
 </div>
 
-<%@ include file="/jsp/include/footer.jsp"%>
+<%@ include file="include/footer.jsp"%>
 </body>
 </html>

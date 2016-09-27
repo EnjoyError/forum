@@ -8,7 +8,7 @@ import com.forum.service.ArticleService;
 import com.forum.util.StringUtil;
 
 @Controller
-@RequestMapping("/article.action")
+@RequestMapping("/articles")
 public class ArticleAction {
 	private ArticleService articleService;
 
@@ -16,7 +16,7 @@ public class ArticleAction {
 		this.articleService = articleService;
 	}
 
-	@RequestMapping(params = "method=publishArticle")
+	@RequestMapping("/publish")
 	public void publishArticle(ArticleDto article) {
 		String code = article.getCode();
 		if (StringUtil.isEmpty(code)) {

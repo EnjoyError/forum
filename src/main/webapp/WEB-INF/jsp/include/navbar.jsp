@@ -13,7 +13,7 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-left">
-				<li class="active"><a href="#">首页</a></li>
+				<li class="active"><a href="{ctx}/index">首页</a></li>
 				<li><a href="#">论坛</a></li>
 				<li><a href="#">wiki</a></li>
 				<li><a href="#">留言</a></li>

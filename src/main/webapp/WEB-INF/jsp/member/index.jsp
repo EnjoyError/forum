@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ include file="/jsp/include/global.jsp"%>
+<%@ include file="../include/global.jsp"%>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<%@ include file="/jsp/include/head.jsp"%>
+	<%@ include file="../include/head.jsp"%>
 	<link href="${ctx}/static/css/home.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<%@ include file="/jsp/include/navbar.jsp"%>
+<%@ include file="../include/navbar.jsp"%>
 
 <div class="headerwrap">
 	<div class="container">
@@ -16,37 +16,37 @@
 			<div class="col-md-4 ucp-nav-left">
 				<div>
 					<img src="${ctx}/static/image/icon_mini_login.gif" alt="*" height="13" width="12" />
-					<a href="${ctx}/jsp/register.jsp">退出[ user ]</a>
+					<a href="#">退出[ user ]</a>
 				</div>
 				<div>
 					<img src="${ctx}/static/image/icon_mini_message.gif" alt="*" height="13" width="12" />
-					<a href="${ctx}/jsp/login.jsp"><strong>0</strong> 条新信息</a>
+					<a href="#"><strong>0</strong> 条新信息</a>
 				</div>
 			</div>
 			<div class="col-md-8 ucp-nav-right">
 				<div>
 					<img src="${ctx}/static/image/icon_mini_faq.gif" alt="*" height="13" width="12" />
-					<a href="${ctx}/jsp/login.jsp">FAQ</a>
+					<a href="#">FAQ</a>
 				</div>
 				<div>
 					<img src="${ctx}/static/image/icon_mini_search.gif" alt="*" height="13" width="12" />
-					<a href="${ctx}/jsp/login.jsp">搜索</a>
+					<a href="#">搜索</a>
 				</div>
 				<div>
 					<img src="${ctx}/static/image/icon_mini_members.gif" alt="*" height="13" width="12" />
-					<a href="${ctx}/jsp/login.jsp">用户列表</a>
+					<a href="#">用户列表</a>
 				</div>
 				<div>
 					<img src="${ctx}/static/image/icon_mini_toplist.gif" alt="*" height="13" width="12" />
-					<a href="${ctx}/jsp/login.jsp">热门感谢</a>
+					<a href="#">热门感谢</a>
 				</div>
 				<div>
 					<img src="${ctx}/static/image/icon_mini_thanks.gif" alt="*" height="13" width="12" />
-					<a href="${ctx}/jsp/login.jsp">个人感谢信息</a>
+					<a href="#">个人感谢信息</a>
 				</div>
 				<div>
 					<img src="${ctx}/static/image/icon_mini_profile.gif" alt="*" height="13" width="12" />
-					<a href="${ctx}/jsp/login.jsp">用户控制面板</a>
+					<a href="#">用户控制面板</a>
 				</div>
 			</div>
 		</div>
@@ -155,6 +155,6 @@
 	</div>
 </div>
 
-<%@ include file="/jsp/include/footer.jsp"%>
+<%@ include file="../include/footer.jsp"%>
 </body>
 </html>
