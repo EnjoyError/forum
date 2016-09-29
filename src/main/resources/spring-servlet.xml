@@ -24,7 +24,6 @@
     http://www.springframework.org/schema/mvc/spring-mvc.xsd ">
 
 	<!-- 启用spring mvc 注解 -->
-	
 	<context:annotation-config />
 	
 	<!-- 静态资源的访问 -->
@@ -39,9 +38,7 @@
 	<bean id="exceptionHandler" class="com.forum.util.ExceptionProcessHandler"/>  
 
 	<!-- 对转向页面的路径解析。prefix：前缀， suffix：后缀 -->
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-		p:prefix="/jsp/" p:suffix=".jsp" />
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" />
 		
-	
 </beans>

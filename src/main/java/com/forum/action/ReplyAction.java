@@ -11,7 +11,7 @@ import com.forum.service.ReplyService;
  * @author Sackr
  *
  */
-@RequestMapping("/reply.action")
+@RequestMapping("/reply")
 public class ReplyAction {
 	private ReplyService replyService;
 
@@ -19,7 +19,7 @@ public class ReplyAction {
 		this.replyService = replyService;
 	}
 
-	@RequestMapping(params = "method=publishReply")
+	@RequestMapping("/publish")
 	public void publishReply(String articleCode, ReplyDto reply) {
 		replyService.publishReply(articleCode, reply);
 	}

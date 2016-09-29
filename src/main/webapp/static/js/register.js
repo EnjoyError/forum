@@ -73,13 +73,13 @@ app.controller('registerCtrl', function($scope, modalService) {
 		};
 		$.ajax({
 			type: 'post',
-			url: global.ctx + '/user.action?method=register',
+			url: global.ctx + '/user/register',
 			dataType:"json",
 			contentType:"application/json",
 			data: JSON.stringify(paramJson),
 			success: function(data) {
 				if (data.success) {
-					window.location.href = global.ctx + '/jsp/login.jsp';
+					window.location.href = global.ctx + '/login';
 				} else {
 					modalService.show(data.message);
 				}
@@ -97,7 +97,7 @@ app.controller('registerCtrl', function($scope, modalService) {
 	
 	$scope.refresh = function() {
 		var now = new Date();
-		var url = global.ctx + '/captcha.action?time=' + now.getTime();
+		var url = global.ctx + '/captcha?time=' + now.getTime();
 		$('#captchaImg').attr('src', url);
 	}
 });
