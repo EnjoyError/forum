@@ -24,3 +24,4 @@
 * css框架: bootstrap
 * js框架: jquery
 * mvvm框架: angularjs
+* js模板: mustache
