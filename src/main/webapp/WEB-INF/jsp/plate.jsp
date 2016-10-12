@@ -37,7 +37,9 @@
 		
 		<div class="row">
 			<div class="col-xs-1 topic-img">
-				<img src="${ctx}/static/image/button_topic_new.gif" />
+				<a href="${ctx}/topic/index">
+					<img src="${ctx}/static/image/button_topic_new.gif" />
+				</a>
 			</div>
 			<div class="col-xs-3 topic-num">
 				<p>分页： 1 / 77 [ 3817 个主题 ]</p>

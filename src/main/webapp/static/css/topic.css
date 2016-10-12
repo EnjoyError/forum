@@ -1,0 +1,34 @@
+.topic-edit-title {
+	width: 50%;
+}
+
+.topic-edit-textbox {
+	width: 100%;
+	height: 250px;
+}
+
+.topic-emoticon-text {
+	width: 100%;
+	text-align: center;
+}
+
+.topic-emoticon-more {
+	width: 100%;
+	text-align: center;
+	color: #9f4c09;
+}
+
+.topic-palette-text {
+	width: 100%;
+	text-align: center;
+}
+
+.topic-palette-body {
+	width: 100%;
+}
+
+.topic-palette-body tr td {
+	width: 10px;
+	height: 10px;
+	border: 2px solid #ffffff;
+}

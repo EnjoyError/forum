@@ -5,6 +5,19 @@
 <html>
 <head>
 	<%@ include file="include/head.jsp"%>
+	<%@ include file="include/template.jsp"%>
+	<script type="text/javascript">
+		$(function() {
+			var temp, result;
+			if (global.isLogin) {
+				temp = $('#loginedTemplate').html();
+				result = Mustache.render(temp, {username: "user"});
+			} else {
+				result = $('#notLoginedTemplate').html();
+			}
+			$('.headerwrap-nav').html(result);
+		})
+	</script>
 </head>
 <body>
 <%@ include file="include/navbar.jsp"%>
@@ -12,6 +25,7 @@
 <div class="headerwrap">
 	<div class="container">
 		<div class="row headerwrap-nav">
+			<!--
 			<div class="col-xs-1">
 				<img src="${ctx}/static/image/icon_mini_login.gif" alt="*" height="13" width="12" />
 				<a href="${ctx}/register">注册</a>
@@ -24,6 +38,7 @@
 				<img src="${ctx}/static/image/icon_mini_faq.gif" alt="*" height="13" width="12" />
 				<a href="#">FAQ</a>
 			</div>
+			-->
 		</div>
 		
 		<div class="row">
