@@ -169,8 +169,7 @@
 				<textarea class="topic-edit-textbox"></textarea>
 			</div>
 			
-			<div class="col-md-1">
-				<table class="topic-palette-body"></table>
+			<div class="col-md-1 palette">
 			</div>
 		</div>
 		
