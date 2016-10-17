@@ -169,13 +169,12 @@
 				<textarea class="topic-edit-textbox"></textarea>
 			</div>
 			
-			<div class="col-md-1">
-				<table class="topic-palette-body"></table>
+			<div class="col-md-1 palette">
 			</div>
 		</div>
 		
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-3 topic-edit-option">
 				<span>选项:</span>
 				<p>BBCode 允许</p>
 				<p>[img] 允许</p>
@@ -184,7 +183,7 @@
 				<p>表情 允许</p>
 			</div>
 			
-			<div class="col-md-8">
+			<div class="col-md-8 topic-edit-check">
 				<div>
 					<input type="checkbox" />禁止解析BBCode
 				</div>

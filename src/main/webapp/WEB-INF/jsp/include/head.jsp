@@ -5,10 +5,12 @@
 <title>${website.title}</title>
 <link href="${ctx}/lib/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="${ctx}/static/css/main.css" rel="stylesheet" type="text/css" />
+<link href="${ctx}/static/css/forum.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="${ctx}/lib/jquery/jquery.js"></script>
 <script type="text/javascript" src="${ctx}/lib/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="${ctx}/lib/angular/angular.js"></script>
 <script type="text/javascript" src="${ctx}/lib/mustache/mustache.js"></script>
+<script type="text/javascript" src="${ctx}/static/js/forum.js"></script>
 <script type="text/javascript">
 	var global = {};
 	global.ctx = '${ctx}';
