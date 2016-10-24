@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.forum.entity.permission.PermissionRelateRole" table="role_permission">
+		<id name="id" column="ID" type="long">
+			<generator class="identity"></generator>
+		</id>
+		<many-to-one name="permission" class="com.forum.entity.permission.Permission" column="PERMISSION_ID"/>
+		<many-to-one name="role" class="com.forum.entity.role.Role" column="ROLE_ID">
+		</many-to-one>
+	</class>
+</hibernate-mapping>

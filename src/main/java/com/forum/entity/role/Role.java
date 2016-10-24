@@ -1,9 +1,6 @@
 package com.forum.entity.role;
 
-import java.util.Set;
-
 import com.forum.entity.baseEntity.BaseEntity;
-import com.forum.entity.permission.Permission;
 
 /**
  * 角色类
@@ -17,8 +14,7 @@ public class Role extends BaseEntity{
 	private String roleName;
 	/** 角色说明*/
 	private String Description;
-	/** 角色拥有的权限*/
-	private Set<Permission> permissions;
+	
 	public String getCode() {
 		return code;
 	}
@@ -37,11 +33,4 @@ public class Role extends BaseEntity{
 	public void setDescription(String description) {
 		Description = description;
 	}
-	public Set<Permission> getPermissions() {
-		return permissions;
-	}
-	public void setPermissions(Set<Permission> permissions) {
-		this.permissions = permissions;
-	}
-	
 }

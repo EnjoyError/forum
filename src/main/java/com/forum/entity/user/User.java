@@ -1,9 +1,6 @@
 package com.forum.entity.user;
 
-import java.util.Set;
-
 import com.forum.entity.baseEntity.BaseEntity;
-import com.forum.entity.role.Role;
 
 /**
  * 用户类
@@ -20,8 +17,6 @@ public class User extends BaseEntity {
 	private String password;
 	/** email */
 	private String email;
-	/** 用户拥有的角色 */
-	private Set<Role> roles;
 
 	public String getEmail() {
 		return email;
@@ -53,14 +48,6 @@ public class User extends BaseEntity {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public Set<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
 	}
 
 }

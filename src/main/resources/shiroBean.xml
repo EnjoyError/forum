@@ -36,10 +36,20 @@
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="authenticationQuery"
 			value="SELECT PASSWORD FROM users WHERE USERNAME = ?"></property>
-		<property name="userRolesQuery"
+		<!-- <property name="userRolesQuery"
 			value="SELECT ROLE_NAME from role_user left join roles using(ROLE_ID) left join users using(USER_ID) WHERE USERNAME = ?"></property>
-		<property name="permissionsQuery"
+		 -->	
+			<property name="userRolesQuery"
+			value="SELECT ROLE_NAME from role_user left join roles ON role_user.ROLE_ID = roles.ID left join users ON users.ID = role_user.USER_ID WHERE users.USERNAME = ?"></property>
+			
+		<!-- <property name="permissionsQuery"
 			value="SELECT CODE FROM role_permission left join roles using(ROLE_ID) left join permissions using(PERMISSION_ID) WHERE ROLE_NAME = ?"></property>
+			 -->
+			
+			<property name="permissionsQuery"
+			value="SELECT permissions.CODE FROM role_permission left join roles ON roles.ID = role_permission.ROLE_ID left join permissions ON role_permission.PERMISSION_ID = permissions.ID WHERE roles.ROLE_NAME = ?"></property>
+	
+	
 	</bean>
 	<bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
 		<constructor-arg value="sid" />

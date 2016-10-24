@@ -13,11 +13,6 @@
 			length="50" />
 		<property name="description" column="DESCRIPTION" type="string"
 			length="50" />
-		<set name="permissions" table="role_permission" lazy="true">
-			<key column="ROLE_ID" />
-			<many-to-many class="com.forum.entity.permission.Permission"
-				column="PERMISSION_ID" />
-		</set>
 
 		<!-- baseEntity里的字段 -->
 		<property name="createDate" column="CREATE_DATE" type="timestamp"
