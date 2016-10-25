@@ -158,5 +158,16 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.hbm.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 </project>
