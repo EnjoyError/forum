@@ -35,7 +35,7 @@ public class UserService extends BaseService {
 			throw new ServiceException("密码不能为空!");
 		}
 		User user = null;
-		user = (User) store.queryUniqueResultByHQL("FROM User user WHERE user.username = :username", "username",
+		user = (User) store.queryUniqueResultByHQL("FROM com.forum.entity.user.User user WHERE user.username = :username ", "username",
 				username);
 		if (null != user) {
 			throw new ServiceException("该用户名已被注册");

@@ -12,6 +12,7 @@
 		<property name="title" column="TITLE" type="string" length="50" />
 		<one-to-one name="body" class="com.forum.entity.body.Body">
 		</one-to-one>
+		<many-to-one name="author" class="com.forum.entity.user.User" not-null="true" column="AUTHOR_ID"/>
 
 		<!-- baseEntity里的字段 -->
 		<property name="createDate" column="CREATE_DATE" type="timestamp"

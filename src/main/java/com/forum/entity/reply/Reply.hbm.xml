@@ -11,6 +11,7 @@
 			unique="true" />
 		<property name="replyContent" column="REPLY_CONTENT" type="string"
 			length="100" />
+		<many-to-one name="author" class="com.forum.entity.user.User" column="AUTHOR_ID" not-null="true" />
 
 		<!-- baseEntity里的字段 -->
 		<property name="createDate" column="CREATE_DATE" type="timestamp"
