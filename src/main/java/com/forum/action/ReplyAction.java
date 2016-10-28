@@ -1,9 +1,12 @@
 package com.forum.action;
 
+import com.forum.util.ActionReturnUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.forum.dto.ReplyDto;
 import com.forum.service.ReplyService;
+
+import java.util.Map;
 
 /**
  * 回复action
@@ -20,7 +23,8 @@ public class ReplyAction {
 	}
 
 	@RequestMapping("/publish")
-	public void publishReply(String articleCode, ReplyDto reply) {
+	public Map<String,Object> publishReply(String articleCode, ReplyDto reply) {
 		replyService.publishReply(articleCode, reply);
+		return ActionReturnUtil.returnSuccess();
 	}
 }

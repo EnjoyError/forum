@@ -3,9 +3,9 @@ package com.forum.entity.module;
 import com.forum.entity.baseEntity.BaseEntity;
 
 /**
- * Created by Sackr on 2016/10/28.
+ * Created by Administrator on 2016/10/29.
  */
-public class Module extends BaseEntity{
+public class HotModule extends BaseEntity{
     /**
      * 编码
      */
@@ -14,6 +14,10 @@ public class Module extends BaseEntity{
      * 名称
      */
     private String name;
+    /**
+     * 板块
+     */
+    private Module module;
 
     public String getCode() {
         return code;
@@ -30,4 +34,13 @@ public class Module extends BaseEntity{
     public void setName(String name) {
         this.name = name;
     }
+
+    public Module getModule() {
+        return module;
+    }
+
+    public void setModule(Module module) {
+        this.module = module;
+    }
 }
+

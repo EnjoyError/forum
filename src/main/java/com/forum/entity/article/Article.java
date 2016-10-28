@@ -2,6 +2,7 @@ package com.forum.entity.article;
 
 import com.forum.entity.baseEntity.BaseEntity;
 import com.forum.entity.body.Body;
+import com.forum.entity.module.Module;
 import com.forum.entity.user.User;
 
 /**
@@ -10,6 +11,10 @@ import com.forum.entity.user.User;
  * @author Sackr
  */
 public class Article extends BaseEntity {
+    /**
+     * 所属模块
+     */
+    private Module module;
     /**
      * 帖子编码
      */
@@ -22,6 +27,14 @@ public class Article extends BaseEntity {
      * 帖子内容
      */
     private Body body;
+
+    public Module getModule() {
+        return module;
+    }
+
+    public void setModule(Module module) {
+        this.module = module;
+    }
 
     /**
      * 作者

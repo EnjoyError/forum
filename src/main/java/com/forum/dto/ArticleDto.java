@@ -2,40 +2,66 @@ package com.forum.dto;
 
 /**
  * 帖子dto
- * 
- * @author Sackr
  *
+ * @author Sackr
  */
 public class ArticleDto {
-	/** 帖子编码 */
-	private String code;
-	/** 帖子标题 */
-	private String title;
-	/** 帖子内容 */
-	private BodyDto body;
+    /**
+     * 所属模块编码
+     */
+    private String moduleCode;
+    /**
+     * 帖子编码
+     */
+    private String code;
+    /**
+     * 帖子标题
+     */
+    private String title;
+    /**
+     * 帖子内容
+     */
+    private BodyDto body;
 
-	public String getCode() {
-		return code;
-	}
+    public String getCode() {
+        return code;
+    }
 
-	public void setCode(String code) {
-		this.code = code;
-	}
+    public void setCode(String code) {
+        this.code = code;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public String getModuleCode() {
+        return moduleCode;
+    }
 
-	public void setBody(BodyDto body) {
-		this.body = body;
-	}
+    public void setModuleCode(String moduleCode) {
+        this.moduleCode = moduleCode;
+    }
 
-	public BodyDto getBody() {
-		return body;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setBody(BodyDto body) {
+        this.body = body;
+    }
+
+    public BodyDto getBody() {
+        return body;
+    }
+
+    /**
+     * 判断是否为新建的帖子
+     *
+     * @return
+     */
+    public boolean isNew() {
+        return null == code;
+    }
 
 }

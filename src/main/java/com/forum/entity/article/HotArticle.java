@@ -1,11 +1,11 @@
-package com.forum.entity.module;
+package com.forum.entity.article;
 
 import com.forum.entity.baseEntity.BaseEntity;
 
 /**
- * Created by Sackr on 2016/10/28.
+ * Created by Administrator on 2016/10/29.
  */
-public class Module extends BaseEntity{
+public class HotArticle extends BaseEntity{
     /**
      * 编码
      */
@@ -14,6 +14,10 @@ public class Module extends BaseEntity{
      * 名称
      */
     private String name;
+    /**
+     * 帖子
+      */
+    private Article article;
 
     public String getCode() {
         return code;
@@ -29,5 +33,13 @@ public class Module extends BaseEntity{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Article getArticle() {
+        return article;
+    }
+
+    public void setArticle(Article article) {
+        this.article = article;
     }
 }

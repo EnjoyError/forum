@@ -21,6 +21,7 @@ public class Store extends HibernateDaoSupport {
 	 * @param entity
 	 */
 	public void save(BaseEntity entity) {
+		entity.refreshUpdateDateTime();
 		getHibernateTemplate().save(entity);
 	}
 

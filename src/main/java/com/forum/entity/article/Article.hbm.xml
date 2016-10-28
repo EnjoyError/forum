@@ -10,10 +10,9 @@
 		<property name="code" column="CODE" type="string" length="50"
 			unique="true" />
 		<property name="title" column="TITLE" type="string" length="50" />
-		<one-to-one name="body" class="com.forum.entity.body.Body">
-		</one-to-one>
-		<many-to-one name="author" class="com.forum.entity.user.User" not-null="true" column="AUTHOR_ID"/>
-
+		<many-to-one name="body" class="com.forum.entity.body.Body" unique="true" not-null="true" column="BODY_ID" />
+		<many-to-one name="author" class="com.forum.entity.user.User" not-null="true" column="AUTHOR_ID"/ >
+		<many-to-one name="module" class="com.forum.entity.module.Module" not-null="true" column="MODULE_ID" />
 		<!-- baseEntity里的字段 -->
 		<property name="createDate" column="CREATE_DATE" type="timestamp"
 			length="50" />
