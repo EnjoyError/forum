@@ -22,7 +22,7 @@
     http://www.springframework.org/schema/util/spring-util.xsd">
 
 
-	<tx:annotation-driven transaction-manager="transactionManager"/>
+	 <tx:annotation-driven transaction-manager="transactionManager"/>
 	<!-- 本地会话工厂bean(spring整合hibernate的核心入口) -->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
@@ -34,7 +34,7 @@
 			</list>
 		</property>
 	</bean>
-	<!-- 定义事务管理器（声明式的事务） -->
+<!-- 	定义事务管理器（声明式的事务） -->
 	<bean id="transactionManager"
 		  class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
