@@ -9,7 +9,6 @@
 <script type="text/javascript" src="${ctx}/lib/jquery/jquery.js"></script>
 <script type="text/javascript" src="${ctx}/lib/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="${ctx}/lib/angular/angular.js"></script>
-<script type="text/javascript" src="${ctx}/lib/mustache/mustache.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/forum.js"></script>
 <script type="text/javascript">
 	var global = {};

@@ -23,5 +23,4 @@
 * 持久层框架：hibernate
 * css框架: bootstrap
 * js框架: jquery
-* mvvm框架: angularjs
-* js模板: mustache
+* 前端mvc框架: angularjs
