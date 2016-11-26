@@ -25,11 +25,6 @@
 	float: left;
 }
 
-.headerwrap {
-	margin-top: -20px;
-	padding-top: 90px;
-}
-
 .headerwrap-nav img {
 	margin-top: -2px;
 }
@@ -128,4 +123,101 @@
 
 .ucp-nav-right div {
 	display: inline;
+}
+
+/**
+ * 首页样式
+ */
+a.mini-item {
+	display: inline-block;
+	padding-left: 18px;
+	background-position: 2px 3px;
+}
+
+.mini-item-padding {
+	padding-right: 20px;
+}
+
+a.read-item {
+	display: inline-block;
+	height: 25px;
+	padding-left: 46px;
+	background-position: 0 0;
+	line-height: 25px;
+}
+
+/**
+ * layout 布局样式文件
+ */
+ .headerwrap {
+	margin-top: 70px;
+}
+
+/**
+ * 图标
+ */
+ .icon-mini-register {
+	background-image: url(../image/icon_mini_register.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-login {
+	background-image: url(../image/icon_mini_login.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-faq {
+	background-image: url(../image/icon_mini_faq.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-message {
+	background-image: url(../image/icon_mini_message.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-search {
+	background-image: url(../image/icon_mini_search.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-members {
+	background-image: url(../image/icon_mini_members.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-toplist {
+	background-image: url(../image/icon_mini_toplist.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-thanks {
+	background-image: url(../image/icon_mini_thanks.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-profile {
+	background-image: url(../image/icon_mini_profile.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-read {
+	background-image: url(../image/forum_read.gif);
+	background-repeat: no-repeat;
+	background-size: 46px 25px;
+}
+
+.icon-read-locked {
+	background-image: url(../image/forum_read_locked.gif);
+	background-repeat: no-repeat;
+	background-size: 46px 25px;
 }
