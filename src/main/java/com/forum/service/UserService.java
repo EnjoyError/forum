@@ -96,6 +96,6 @@ public class UserService extends BaseService {
 
     public User getUserByUsername(String username) {
         String hql = "FROM User myUser WHERE myUser.username = :username";
-        return (User) store.queryByHQL(hql, "username", username);
+        return (User) store.queryUniqueResultByHQL(hql, "username", username);
     }
 }
