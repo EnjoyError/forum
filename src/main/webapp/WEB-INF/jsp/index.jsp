@@ -5,29 +5,28 @@
 <html>
 <head>
 	<%@ include file="include/head.jsp"%>
-	<script type="text/javascript" src="${ctx}/static/js/index.js"></script>
 </head>
 <body>
 <%@ include file="include/navbar.jsp"%>
 
 <div class="headerwrap container" ng-app="indexApp">
 	<div class="row" ng-controller="loginCtrl">
-		<div class="col-md-12 col-xs-12" ng-show="!isLogin">
-			<a class="icon-mini-register mini-item mini-item-padding pull-left" href="${ctx}/register">注册</a>
-			<a class="icon-mini-login mini-item pull-left" href="${ctx}/login">登录</a>
-			<a class="icon-mini-faq mini-item pull-right" href="#">FAQ</a>
+		<div class="menubar col-md-12 col-xs-12" ng-show="!isLogin">
+			<a class="icon-mini-register mini-item" href="${ctx}/register">注册</a>
+			<a class="icon-mini-login mini-item" href="${ctx}/login">登录</a>
+			<a class="icon-mini-faq mini-item" href="#">FAQ</a>
 		</div>
 		
-		<div class="col-md-4 col-xs-12" ng-show="isLogin">
+		<div class="menubar-left col-md-4 col-xs-12" ng-show="isLogin">
 			<a class="icon-mini-register mini-item" href="#">退出[ {{ username }} ]</a>
 			<a class="icon-mini-message mini-item" href="#"><strong>0</strong> 条新信息</a>
 		</div>
-		<div class="col-md-8 col-xs-12 text-right" ng-show="isLogin">
-			<a class="icon-mini-faq mini-item mini-item-padding" href="#">FAQ</a>
-			<a class="icon-mini-search mini-item mini-item-padding" href="#">搜索</a>
-			<a class="icon-mini-members mini-item mini-item-padding" href="#">用户列表</a>
-			<a class="icon-mini-toplist mini-item mini-item-padding" href="#">热门感谢</a>
-			<a class="icon-mini-thanks mini-item mini-item-padding" href="#">个人感谢信息</a>
+		<div class="menubar-right col-md-8 col-xs-12" ng-show="isLogin">
+			<a class="icon-mini-faq mini-item" href="#">FAQ</a>
+			<a class="icon-mini-search mini-item" href="#">搜索</a>
+			<a class="icon-mini-members mini-item" href="#">用户列表</a>
+			<a class="icon-mini-toplist mini-item" href="#">热门感谢</a>
+			<a class="icon-mini-thanks mini-item" href="#">个人感谢信息</a>
 			<a class="icon-mini-profile mini-item" href="#">用户控制面板</a>
 		</div>
 	</div>

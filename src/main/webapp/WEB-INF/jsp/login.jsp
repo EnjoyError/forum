@@ -97,5 +97,10 @@
 </div>
 
 <%@ include file="include/footer.jsp"%>
+<script type="text/javascript">
+	$(function() {
+		$('#alert').hide();
+	})
+</script>
 </body>
 </html>

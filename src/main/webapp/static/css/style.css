@@ -1,0 +1,319 @@
+.topic-edit-title {
+	width: 50%;
+}
+
+.topic-edit-textbox {
+	width: 100%;
+	height: 250px;
+}
+
+.topic-edit-option p {
+	margin: 0px 0px;
+}
+
+.topic-edit-check div:first-child {
+	padding-top: 20px;
+}
+
+.topic-emoticon-text {
+	width: 100%;
+	text-align: center;
+}
+
+.topic-emoticon-more {
+	width: 100%;
+	text-align: center;
+	color: #9f4c09;
+}
+
+.topic-palette-text {
+	width: 100%;
+	text-align: center;
+}
+
+.topic-palette-body {
+	width: 100%;
+}
+
+.topic-palette-body tr td {
+	width: 10px;
+	height: 10px;
+	border: 2px solid #ffffff;
+}
+
+
+
+.topic img {
+	margin-top: 20px;
+	margin-left: 16px;
+}
+
+.topic .col-xs-1 p {
+	padding-top: 20px;
+}
+
+.online img {
+	margin-top: 50px;
+	margin-left: 16px;
+}
+
+.statistics img {
+	margin-left: 16px;
+}
+
+.posttype img {
+	float: left;
+	margin-top: -3px;
+}
+
+.posttype p {
+	float: left;
+}
+
+.headerwrap-nav img {
+	margin-top: -2px;
+}
+
+.footer p {
+	padding: 0;
+	margin: 0;
+}
+
+.clear {
+	float: clear;
+}
+
+.topic img {
+	width: 19px;
+	height: 18px;
+	margin-top: 28px;
+	margin-left: 32px;
+}
+
+.topic .col-xs-1 p {
+	padding-top: 20px;
+}
+
+.topic-img img {
+	padding-top: 5px;
+}
+
+.topic-num p {
+	padding-left: 15px;
+	padding-top: 8px;
+}
+
+.topic-context {
+	display: inline;
+	margin-top: -5px;
+}
+
+.topic-context div {
+	display: inline;
+}
+
+.topic-context p {
+	display: inline;
+}
+
+.topic-type h3 {
+	padding-left: 10px;
+	font-size: 16px;
+}
+
+.topic-page {
+	padding-right: 10px;
+	text-align: right;
+}
+
+.article-postdate {
+	display: inline;
+}
+
+.article-postdate img {
+	margin-top: 4px;
+	float: left;
+}
+
+.article-postdate p {
+	float: left;
+}
+
+.article-content {
+	min-height: 300px;
+}
+
+.ucp-nav-left {
+	display: inline;
+}
+
+.ucp-nav-left div {
+	display: inline;
+}
+
+.ucp-nav-right div img {
+	padding-left: 0px;
+	padding-right: 0.05px;
+}
+
+.ucp-nav-left div a {
+	padding-left: 0.05px;
+	padding-right: 2px;
+}
+
+.ucp-nav-right {
+	display: inline;
+	text-align: right;
+}
+
+.ucp-nav-right div {
+	display: inline;
+}
+
+
+
+/**
+ * 首页样式
+ */
+a.mini-item {
+	display: inline-block;
+	padding-left: 18px;
+	background-position: 2px 3px;
+}
+
+a.read-item {
+	display: inline-block;
+	height: 25px;
+	padding-left: 46px;
+	background-position: 0 0;
+	line-height: 25px;
+}
+
+.menubar > a:first-child {
+	padding-right: 20px;
+}
+
+.menubar > a:last-child {
+	float: right !important;
+}
+
+.menubar-left > a {
+	margin-right: 20px;
+}
+
+.menubar-left > a:last-child {
+	margin-right: 0;
+}
+
+.menubar-right {
+	text-align: right;
+}
+
+.menubar-right > a {
+	margin-right: 20px;
+}
+
+.menubar-right > a:last-child {
+	margin-right: 0;
+}
+
+/**
+ * layout 布局样式文件
+ */
+ .headerwrap {
+	margin-top: 70px;
+}
+
+/**
+ * 图标
+ */
+ .icon-mini-register {
+	background-image: url(../image/icon_mini_register.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-login {
+	background-image: url(../image/icon_mini_login.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-faq {
+	background-image: url(../image/icon_mini_faq.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-message {
+	background-image: url(../image/icon_mini_message.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-search {
+	background-image: url(../image/icon_mini_search.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-members {
+	background-image: url(../image/icon_mini_members.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-toplist {
+	background-image: url(../image/icon_mini_toplist.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-thanks {
+	background-image: url(../image/icon_mini_thanks.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-mini-profile {
+	background-image: url(../image/icon_mini_profile.gif);
+	background-repeat: no-repeat;
+	background-size: 12px 13px;
+}
+
+.icon-read {
+	background-image: url(../image/forum_read.gif);
+	background-repeat: no-repeat;
+	background-size: 46px 25px;
+}
+
+.icon-read-locked {
+	background-image: url(../image/forum_read_locked.gif);
+	background-repeat: no-repeat;
+	background-size: 46px 25px;
+}
+
+.ucp-notice-text img {
+	display: inline;
+}
+
+.ucp-notice-text p {
+	display: inline;
+}
+
+.ucp-notice-text img {
+}
+
+.ucp-nav-right div img {
+	padding-left: 2px;
+	padding-right: 0.05px;
+}
+
+.ucp-nav-right div a {
+	padding-left: 0.05px;
+	padding-right: 0px;
+}
+
+.ucp-body {
+	height: 675px;
+}

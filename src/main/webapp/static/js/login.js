@@ -1,7 +1,3 @@
-$(function() {
-	$('#alert').hide();
-})
-
 var app = angular.module('webApp', []);
 
 app.service('tipService', function() {
