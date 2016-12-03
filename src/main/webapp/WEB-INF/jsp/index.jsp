@@ -10,7 +10,7 @@
 <%@ include file="include/navbar.jsp"%>
 
 <div class="headerwrap container" ng-app="indexApp">
-	<div class="row" ng-controller="loginCtrl">
+	<div class="row" ng-controller="menubarCtrl">
 		<div class="menubar col-md-12 col-xs-12" ng-show="!isLogin">
 			<a class="icon-mini-register mini-item" href="${ctx}/register">注册</a>
 			<a class="icon-mini-login mini-item" href="${ctx}/login">登录</a>
