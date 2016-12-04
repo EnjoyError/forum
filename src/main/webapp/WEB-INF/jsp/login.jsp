@@ -5,94 +5,87 @@
 <html>
 <head>
 	<%@ include file="include/head.jsp"%>
-	<script src="${ctx}/static/js/login.js"></script>
 </head>
 
-<body ng-app="webApp" ng-controller="loginCtrl">
+<body ng-app="loginApp" ng-controller="loginCtrl">
 <%@ include file="include/navbar.jsp"%>
 
-<div class="headerwrap">
-	<div class="container">
-		<div class="row headerwrap-nav">
-			<div class="col-xs-1">
-				<img src="${ctx}/static/image/icon_mini_register.gif" alt="*" height="13" width="12">
-				<a href="${ctx}/register">注册</a>
-			</div>
-			<div class="col-xs-offset-11 text-center">
-				<img src="${ctx}/static/image/icon_mini_faq.gif" alt="*" height="13" width="12">
-				<a href="#">FAQ</a>
+<div class="headerwrap container">
+	<div class="row">
+		<div class="menubar col-md-12 col-xs-12">
+			<a class="icon-mini-register mini-item" href="${ctx}/register">注册</a>
+			<a class="icon-mini-faq mini-item" href="#">FAQ</a>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-10">
+			<a href="${ctx}/index">首页</a>
+		</div>
+		<div class="col-md-2">
+			<p>当前时区为 UTC + 8 小时</p>
+		</div>
+	</div>
+	
+	<div class="list-group">
+		<div class="list-group-item">
+			<div class="row text-center">
+				<div class="col-xs-12">
+					<p>登录</p>
+				</div>
 			</div>
 		</div>
 		
-		<div class="row">
-			<div class="col-xs-1">
-				<a href="${ctx}/index">首页</a>
-			</div>
-			<div class="col-xs-offset-10 text-center">
-				<p>当前时区为 UTC + 8 小时</p>
+		<div class="list-group-item" ng-show="alertShow">
+			<div class="row">
+				<div class="alert alert-success">{{ alertContent }}</div>
 			</div>
 		</div>
 		
-		<ul class="list-group">
-			<li class="list-group-item">
-				<div class="row text-center">
-					<div class="col-xs-12">
-						<p>登录</p>
+		<div class="list-group-item">
+			<div class="row">
+				<div class="col-xs-4">
+					<p>用户名:</p>
+				</div>
+				<div class="col-xs-8">
+					<div>
+						<input type="text" ng-model="username" ng-focus="hideTip()" />
+						<popover-directive content="{{ tipContent }}" ng-show="showUserTip"></popover-directive>
+					</div>
+					<div>
+						<a href="${ctx}/register">注册</a>
 					</div>
 				</div>
-			</li>
-			
-			<li class="list-group-item" id="alert">
-				<div class="row">
-					<div class="alert alert-success"></div>
+			</div>
+		</div>
+		
+		<div class="list-group-item">
+			<div class="row">
+				<div class="col-xs-4">
+					<p>密码:</p>
 				</div>
-			</li>
-			
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-4">
-						<p>用户名:</p>
+				<div class="col-xs-8">
+					<div>
+						<input type="password" ng-model="password" ng-focus="hideTip()"/>
+						<popover-directive content="{{ tipContent }}" ng-show="showPassTip"></popover-directive>
 					</div>
-					<div class="col-xs-8">
-						<div>
-							<input type="text" id="username"
-								ng-model="username" ng-focus="hideUserTip()" />
-						</div>
-						<div>
-							<a href="${ctx}/register">注册</a>
-						</div>
+					<div>
+						<a href="#">我忘记了自己的密码</a>
+					</div>
+					<div>
+						<input type="checkbox" ng-model="rememberMe" />每次浏览时自动登录
 					</div>
 				</div>
-			</li>
-			
-			<li class="list-group-item">
-				<div class="row">
-					<div class="col-xs-4">
-						<p>密码:</p>
-					</div>
-					<div class="col-xs-8">
-						<div>
-							<input type="password" id="password"
-								ng-model="password" ng-focus="hidePasswordTip()"/>
-						</div>
-						<div>
-							<a href="#">我忘记了自己的密码</a>
-						</div>
-						<div>
-							<input type="checkbox" ng-model="rememberMe" />每次浏览时自动登录
-						</div>
-					</div>
+			</div>
+		</div>
+		
+		<div class="list-group-item">
+			<div class="row text-center">
+				<div class="col-xs-12">
+					<button type="button" class="btn btn-primary" ng-click="login()">登录</button>
 				</div>
-			</li>
-			
-			<li class="list-group-item">
-				<div class="row text-center">
-					<div class="col-xs-12">
-						<button type="button" class="btn btn-primary" ng-click="login()">登录</button>
-					</div>
-				</div>
-			</li>
-		</ul>
+			</div>
+		</div>
 	</div>
 </div>
 
