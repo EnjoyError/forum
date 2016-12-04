@@ -5,8 +5,6 @@
 <html>
 <head>
 	<%@ include file="include/head.jsp"%>
-	<link href="${ctx}/static/css/home.css" rel="stylesheet" type="text/css" />
-	<link href="${ctx}/static/css/topic.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="${ctx}/static/js/topic.js"></script>
 </head>
 <body>
