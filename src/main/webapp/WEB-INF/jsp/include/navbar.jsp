@@ -16,7 +16,7 @@
 				<li class="active"><a href="${ctx}/index">首页</a></li>
 				<li><a href="#">论坛</a></li>
 				<li><a href="#">wiki</a></li>
-				<li><a href="#">留言</a></li>
+				<li><a href="#">关于</a></li>
 			</ul>
 			<form class="navbar-form navbar-right">
 				<div class="form-group">
