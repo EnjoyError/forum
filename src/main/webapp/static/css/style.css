@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 .topic-edit-title {
 	width: 50%;
 }
@@ -169,7 +171,7 @@
 
 
 /**
- * Ê×Ò³ÑùÊ½
+ * é¦–é¡µæ ·å¼
  */
 a.mini-item {
 	display: inline-block;
@@ -214,14 +216,14 @@ a.read-item {
 }
 
 /**
- * layout ²¼¾ÖÑùÊ½ÎÄ¼ş
+ * layout å¸ƒå±€æ ·å¼æ–‡ä»¶
  */
  .headerwrap {
 	margin-top: 70px;
 }
 
 /**
- * Í¼±ê
+ * å›¾æ ‡
  */
  .icon-mini-register {
 	background-image: url(../image/icon_mini_register.gif);
@@ -312,4 +314,17 @@ a.read-item {
 
 .ucp-body {
 	height: 675px;
+}
+
+/**
+ * è°ƒè‰²æ¿æ ·å¼
+ **/
+.palette table {
+	width: 100%;
+}
+
+.palette tr td {
+	width: 10px;
+	height: 10px;
+	border: 2px solid #ffffff;
 }

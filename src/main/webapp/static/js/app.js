@@ -230,3 +230,120 @@ registerApp.controller('registerCtrl', function($scope, modalService) {
 		$('#captchaImg').attr('src', url);
 	}
 });
+
+
+
+/**
+ * 发表主题页面
+ */
+var topicApp = angular.module('topicApp', []);
+
+topicApp.directive('paletteDirective', function() {
+	return {
+		controller: "labelCtrl",
+		template: function(tElement, tAttrs) {
+			var colors = ['00', '40', '80', 'BF', 'FF'];
+			var table = angular.element('<table></table>');
+			
+			for (var number = 0; number < colors.length; number++) {
+				for (var col = 0; col < colors.length; col++) {
+					var tr = angular.element('<tr></tr>');
+					for (var row = 0; row < colors.length; row++) {
+						var color = colors[number] + colors[col] + colors[row];
+						tr.append('<td style="background-color: #' + color + '" data-color="#' + color + '"></td>');
+					}
+					table.append(tr);
+				}
+			}
+			
+			return table;
+		},
+		link: function(scope, element, attrs, labelCtrl) {
+			element.find('td').bind('click', function() {
+				var $this = angular.element(this);
+				var color = $this.data('color');
+				
+				labelCtrl.editText('[color=' + color + ']', '[/color]');
+			});
+		}
+	};
+});
+
+topicApp.controller('labelCtrl', function($scope) {
+	this.editText = function(prefix, suffix) {
+		var $editor = angular.element('#editor');
+		var textarea = $editor.get(0);
+		
+		var content = $editor.val();
+		
+		var start = textarea.selectionStart;
+		var end = textarea.selectionEnd;
+		
+		var frontText = content.substr(0, start);
+		var backText = content.substr(end, content.length);
+		var selectText = content.substr(start, end);
+		
+		if (start == end) {
+			content = frontText + prefix + suffix + backText;
+			
+			$editor.val(content);
+			textarea.focus();
+			
+			textarea.selectionStart = start + prefix.length;
+			textarea.selectionEnd = end + prefix.length;
+		} else {
+			content = frontText + prefix + selectText + suffix + backText;
+			
+			$editor.val(content);
+			textarea.focus();
+			
+			textarea.selectionStart = content.length;
+			textarea.selectionEnd = content.length;
+		}
+	}
+	
+	$scope.click = function($target) {
+	}
+});
+
+topicApp.controller('emoticonCtrl', function($scope) {
+});
+
+topicApp.controller('editorCtrl', function($scope) {
+});
+
+topicApp.controller('topicCtrl', function($scope) {
+	$scope.preview = function() {
+		console.log('preview');
+	}
+	
+	$scope.submit = function() {
+		console.log('submit');
+	}
+	
+	$scope.save = function() {
+		console.log('svae');
+	}
+	
+	$scope.cancel = function() {
+		console.log('cancel');
+	}
+});
+
+topicApp.controller('uploadCtrl', function($scope) {
+	$scope.addFile = function() {
+		console.log('addFile');
+	}
+	
+	$scope.preview = function() {
+		console.log('preview');
+	}
+	
+	$scope.submit = function() {
+		console.log('submit');
+	}
+	
+	$scope.cancel = function() {
+		console.log('cancel');
+	}
+});
