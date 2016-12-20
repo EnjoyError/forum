@@ -48,7 +48,9 @@
 				</a>
 			</div>
 			<div class="col-xs-1 topic-img">
-				<img src="${ctx}/static/image/button_topic_reply.gif" />
+				<a href="${ctx}/topic/index">
+					<img src="${ctx}/static/image/button_topic_reply.gif" />
+				</a>
 			</div>
 			<div class="col-xs-3 topic-num">
 				<p>分享到<b>0</b></p>

@@ -5,52 +5,29 @@
 <html>
 <head>
 	<%@ include file="include/head.jsp"%>
-	<script type="text/javascript" src="${ctx}/static/js/topic.js"></script>
 </head>
-<body>
+<body ng-app="topicApp">
 <%@ include file="include/navbar.jsp"%>
 
-<div class="headerwrap">
-	<div class="container">
+<div class="headerwrap container">
+	<div class="menubar">
 		<div class="row">
-			<div class="col-md-4 ucp-nav-left">
-				<div>
-					<img src="${ctx}/static/image/icon_mini_login.gif" alt="*" height="13" width="12" />
-					<a href="#">退出[ user ]</a>
-				</div>
-				<div>
-					<img src="${ctx}/static/image/icon_mini_message.gif" alt="*" height="13" width="12" />
-					<a href="#"><strong>0</strong> 条新信息</a>
-				</div>
+			<div class="menubar-left col-md-4 col-xs-12">
+				<a class="icon-mini-register mini-item" href="#">退出[ user ]</a>
+				<a class="icon-mini-message mini-item" href="#"><strong>0</strong> 条新信息</a>
 			</div>
-			<div class="col-md-8 ucp-nav-right">
-				<div>
-					<img src="${ctx}/static/image/icon_mini_faq.gif" alt="*" height="13" width="12" />
-					<a href="#">FAQ</a>
-				</div>
-				<div>
-					<img src="${ctx}/static/image/icon_mini_search.gif" alt="*" height="13" width="12" />
-					<a href="#">搜索</a>
-				</div>
-				<div>
-					<img src="${ctx}/static/image/icon_mini_members.gif" alt="*" height="13" width="12" />
-					<a href="#">用户列表</a>
-				</div>
-				<div>
-					<img src="${ctx}/static/image/icon_mini_toplist.gif" alt="*" height="13" width="12" />
-					<a href="#">热门感谢</a>
-				</div>
-				<div>
-					<img src="${ctx}/static/image/icon_mini_thanks.gif" alt="*" height="13" width="12" />
-					<a href="#">个人感谢信息</a>
-				</div>
-				<div>
-					<img src="${ctx}/static/image/icon_mini_profile.gif" alt="*" height="13" width="12" />
-					<a href="#">用户控制面板</a>
-				</div>
+			<div class="menubar-right col-md-8 col-xs-12">
+				<a class="icon-mini-faq mini-item" href="#">FAQ</a>
+				<a class="icon-mini-search mini-item" href="#">搜索</a>
+				<a class="icon-mini-members mini-item" href="#">用户列表</a>
+				<a class="icon-mini-toplist mini-item" href="#">热门感谢</a>
+				<a class="icon-mini-thanks mini-item" href="#">个人感谢信息</a>
+				<a class="icon-mini-profile mini-item" href="#">用户控制面板</a>
 			</div>
 		</div>
-		
+	</div>
+	
+	<div class="searchbar" style="padding: 2px 0">
 		<div class="row">
 			<div class="col-md-4">
 				<a>查看没有回复的主题</a> | <a>查看活跃的主题</a>
@@ -59,28 +36,22 @@
 				<a>查看新帖</a> | <a>查看您的主题</a> | <a>查看您的帖子</a> | <a>查看书签</a>
 			</div>
 		</div>
-		
 		<div class="row">
-			<div class="col-md-12">
-				<p></p>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-md-1">
+			<div class="col-md-10">
 				<a href="${ctx}/index">首页</a>
 			</div>
-			<div class="col-md-offset-10 text-center">
+			<div class="col-md-2">
 				<p>当前时区为 UTC + 8 小时</p>
 			</div>
 		</div>
-		
 		<div class="row">
 			<div class="col-md-9">
 				<h3>新闻和通知</h3>
 			</div>
 		</div>
-		
+	</div>
+	
+	<div class="" ng-controller="topicCtrl">
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<h4>发表主题</h4>
@@ -97,12 +68,14 @@
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row" ng-controller="labelCtrl" ng-init="symbols = ['B', 'i', 'u', 'quote', 'Code', 'List', 'List=']">
 			<div class="col-md-3">
 				<span>帖子内容:</span>
 			</div>
 			
-			<div class="col-md-8">
+			<div class="col-md-8" ng-click="click">
+				<input type="button" value=" {{s}} " ng-repeat="s in symbols" ng-click="click()"/>
+				<!--
 				<input type="button" value=" B " />
 				<input type="button" value=" i " />
 				<input type="button" value=" u " />
@@ -110,6 +83,7 @@
 				<input type="button" value=" Code " />
 				<input type="button" value=" List " />
 				<input type="button" value=" List= " />
+				-->
 			</div>
 		</div>
 		
@@ -128,7 +102,7 @@
 		</div>
 		
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-3" ng-controller="emoticonCtrl">
 				<p class="topic-emoticon-text">表情</p>
 				<table>
 					<tr>
@@ -164,10 +138,14 @@
 			</div>
 			
 			<div class="col-md-8">
-				<textarea class="topic-edit-textbox"></textarea>
+				<textarea id="editor" class="topic-edit-textbox"></textarea>
 			</div>
 			
+			<!--
 			<div class="col-md-1 palette">
+			</div>
+			-->
+			<div class="col-md-1 palette" palette-directive>
 			</div>
 		</div>
 		
@@ -202,13 +180,15 @@
 		
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<input type="button" value="预览" />
-				<input type="button" value="提交" />
-				<input type="button" value="保存" />
-				<input type="button" value="取消" />
+				<input type="button" value="预览" ng-click="preview()" />
+				<input type="button" value="提交" ng-click="submit()" />
+				<input type="button" value="保存" ng-click="save()" />
+				<input type="button" value="取消" ng-click="cancel()" />
 			</div>
 		</div>
-		
+	</div>
+	
+	<div style="padding-bottom: 10px" ng-controller="uploadCtrl">
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<h4>上传附件</h4>
@@ -238,21 +218,15 @@
 			
 			<div class="col-md-8">
 				<textarea></textarea>
-				<input type="button" value="添加文件" />
+				<input type="button" value="添加文件" ng-click="addFile()" />
 			</div>
 		</div>
 		
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<input type="button" value="预览" />
-				<input type="button" value="提交" />
-				<input type="button" value="取消" />
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-md-12">
-				<p></p>
+				<input type="button" value="预览" ng-click="preview()" />
+				<input type="button" value="提交" ng-click="submit()" />
+				<input type="button" value="取消" ng-click="cancel()" />
 			</div>
 		</div>
 	</div>
